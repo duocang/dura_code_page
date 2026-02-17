@@ -1,6 +1,6 @@
-# Human Dura Rebuttal Analysis
+# Human Dura Atlas Analysis
 
-This project contains the analysis code for the Human Dura Rebuttal, formatted as an R Markdown website.
+This project contains the analysis code for the Human Dura Atlas, formatted as an R Markdown website.
 
 ## Project Structure
 
@@ -13,9 +13,11 @@ This project contains the analysis code for the Human Dura Rebuttal, formatted a
 To deploy this analysis as a website using GitHub Pages, follow these steps:
 
 ### 1. Prerequisites
+
 Ensure you have the necessary R packages installed (see `src/global.R`) and place your data files (e.g., `39.0_samples_seurat_all.qs`) in the project root directory.
 
 ### 2. Render the Website
+
 Open the project in RStudio and run the following command in the R console to generate the HTML file:
 
 ```r
@@ -25,6 +27,7 @@ rmarkdown::render_site()
 This will create an `index.html` file and a `site_libs/` directory containing the website assets.
 
 ### 3. Deploy to GitHub
+
 1.  Initialize a git repository (if not already done):
     ```bash
     git init
@@ -40,6 +43,7 @@ This will create an `index.html` file and a `site_libs/` directory containing th
     ```
 
 ### 4. Enable GitHub Pages
+
 1.  Go to your repository on GitHub.
 2.  Click on **Settings** > **Pages**.
 3.  Under **Source**, select `Deploy from a branch`.

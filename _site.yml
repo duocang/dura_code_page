@@ -1,7 +1,7 @@
-name: "Human Dura Rebuttal Analysis"
-output_dir: "."
+name: 'Human Dura Atlas'
+output_dir: '.'
 navbar:
-  title: "Human Dura Rebuttal"
+  title: 'Human Dura Atlas'
   left:
-    - text: "Home"
+    - text: 'Home'
       href: index.html

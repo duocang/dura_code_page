@@ -1,0 +1,7 @@
+name: "Human Dura Rebuttal Analysis"
+output_dir: "."
+navbar:
+  title: "Human Dura Rebuttal"
+  left:
+    - text: "Home"
+      href: index.html

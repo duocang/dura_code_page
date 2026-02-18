@@ -78,19 +78,6 @@ library(readr)
 #milo
 library(miloR)
 library(miloDE)
-
-
-samples_seurat <- qread("39.0_samples_seurat_all.qs")
-
-# Point 11.1-11.4.4
-Bc_all_seurat <- qread("39.0_samples_seurat_reclustered_Bc_subset")
-
-# Point 15.1-15.9.1
-Fibro_main_seurat <- qread("39.0_samples_seurat_reclustered_Fibro_subset")
-
-# point 14.1-14.6.3
-myeloid_main_seurat <- qread("39.0_samples_seurat_reclustered_myeloid_subset")
-
 ```
 
 ## 1.2 Load Raw Data
@@ -99,7 +86,7 @@ _Note: The code below outlines the process for loading raw data, but assumes pre
 
 ```{r eval=FALSE, include=TRUE}
 
-#download h4 files from ENA
+#download h5 files from GEO
 #load individual samples with Read10x_h5() function
 
 ```

@@ -1,384 +1,362 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="generator" content="pandoc" />
-    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-    <meta name="date" content="2026-02-17" />
+<head>
 
-    <title>Human Dura</title>
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-    <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
-    <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-    <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-    <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-    <style>
-      h1 {
-        font-size: 34px;
-      }
-      h1.title {
-        font-size: 38px;
-      }
-      h2 {
-        font-size: 30px;
-      }
-      h3 {
-        font-size: 24px;
-      }
-      h4 {
-        font-size: 18px;
-      }
-      h5 {
-        font-size: 16px;
-      }
-      h6 {
-        font-size: 12px;
-      }
-      code {
-        color: inherit;
-        background-color: rgba(0, 0, 0, 0.04);
-      }
-      pre:not([class]) {
-        background-color: white;
-      }
-    </style>
-    <script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-    <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-    <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
-    <script src="site_libs/navigation-1.1/tabsets.js"></script>
-    <script src="site_libs/navigation-1.1/codefolding.js"></script>
-    <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-    <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
-    <style type="text/css">
-      code {
-        white-space: pre-wrap;
-      }
-      span.smallcaps {
-        font-variant: small-caps;
-      }
-      span.underline {
-        text-decoration: underline;
-      }
-      div.column {
-        display: inline-block;
-        vertical-align: top;
-        width: 50%;
-      }
-      div.hanging-indent {
-        margin-left: 1.5em;
-        text-indent: -1.5em;
-      }
-      ul.task-list {
-        list-style: none;
-      }
+
+<meta name="date" content="2026-02-18" />
+
+<title>Human Dura</title>
+
+<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
     </style>
 
-    <style type="text/css">
-      code {
-        white-space: pre;
-      }
-    </style>
-    <script type="text/javascript">
-      if (window.hljs) {
-        hljs.configure({ languages: [] });
-        hljs.initHighlightingOnLoad();
-        if (document.readyState && document.readyState === 'complete') {
-          window.setTimeout(function () {
-            hljs.initHighlighting();
-          }, 0);
-        }
-      }
-    </script>
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
 
-    <style type="text/css">
-      .main-container {
-        max-width: 940px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      img {
-        max-width: 100%;
-      }
-      .tabbed-pane {
-        padding-top: 12px;
-      }
-      .html-widget {
-        margin-bottom: 20px;
-      }
-      button.code-folding-btn:focus {
-        outline: none;
-      }
-      summary {
-        display: list-item;
-      }
-      details > summary > p:only-child {
-        display: inline;
-      }
-      pre code {
-        padding: 0;
-      }
-    </style>
 
-    <style type="text/css">
-      .dropdown-submenu {
-        position: relative;
-      }
-      .dropdown-submenu > .dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -6px;
-        margin-left: -1px;
-        border-radius: 0 6px 6px 6px;
-      }
-      .dropdown-submenu:hover > .dropdown-menu {
-        display: block;
-      }
-      .dropdown-submenu > a:after {
-        display: block;
-        content: ' ';
-        float: right;
-        width: 0;
-        height: 0;
-        border-color: transparent;
-        border-style: solid;
-        border-width: 5px 0 5px 5px;
-        border-left-color: #cccccc;
-        margin-top: 5px;
-        margin-right: -10px;
-      }
-      .dropdown-submenu:hover > a:after {
-        border-left-color: #adb5bd;
-      }
-      .dropdown-submenu.pull-left {
-        float: none;
-      }
-      .dropdown-submenu.pull-left > .dropdown-menu {
-        left: -100%;
-        margin-left: 10px;
-        border-radius: 6px 0 6px 6px;
-      }
-    </style>
 
-    <script type="text/javascript">
-      // manage active state of menu based on current page
-      $(document).ready(function () {
-        // active menu anchor
-        href = window.location.pathname;
-        href = href.substr(href.lastIndexOf('/') + 1);
-        if (href === '') href = 'index.html';
-        var menuAnchor = $('a[href="' + href + '"]');
 
-        // mark the anchor link active (and if it's in a dropdown, also mark that active)
-        var dropdown = menuAnchor.closest('li.dropdown');
-        if (window.bootstrap) {
-          // Bootstrap 4+
-          menuAnchor.addClass('active');
-          dropdown.find('> .dropdown-toggle').addClass('active');
-        } else {
-          // Bootstrap 3
-          menuAnchor.parent().addClass('active');
-          dropdown.addClass('active');
-        }
 
-        // Navbar adjustments
-        var navHeight = $('.navbar').first().height() + 15;
-        var style = document.createElement('style');
-        var pt = 'padding-top: ' + navHeight + 'px; ';
-        var mt = 'margin-top: -' + navHeight + 'px; ';
-        var css = '';
-        // offset scroll position for anchor links (for fixed navbar)
-        for (var i = 1; i <= 6; i++) {
-          css += '.section h' + i + '{ ' + pt + mt + '}\n';
-        }
-        style.innerHTML = 'body {' + pt + 'padding-bottom: 40px; }\n' + css;
-        document.head.appendChild(style);
-      });
-    </script>
 
-    <!-- tabsets -->
 
-    <style type="text/css">
-      .tabset-dropdown > .nav-tabs {
-        display: inline-table;
-        max-height: 500px;
-        min-height: 44px;
-        overflow-y: auto;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
 
-      .tabset-dropdown > .nav-tabs > li.active:before,
-      .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-        content: '\e259';
-        font-family: 'Glyphicons Halflings';
-        display: inline-block;
-        padding: 10px;
-        border-right: 1px solid #ddd;
-      }
 
-      .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-        content: '\e258';
-        font-family: 'Glyphicons Halflings';
-        border: none;
-      }
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
 
-      .tabset-dropdown > .nav-tabs > li.active {
-        display: block;
-      }
 
-      .tabset-dropdown > .nav-tabs > li > a,
-      .tabset-dropdown > .nav-tabs > li > a:focus,
-      .tabset-dropdown > .nav-tabs > li > a:hover {
-        border: none;
-        display: inline-block;
-        border-radius: 4px;
-        background-color: transparent;
-      }
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
 
-      .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-        display: block;
-        float: none;
-      }
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
 
-      .tabset-dropdown > .nav-tabs > li {
-        display: none;
-      }
-    </style>
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-    <!-- code folding -->
-    <style type="text/css">
-      .code-folding-btn {
-        margin-bottom: 4px;
-      }
-    </style>
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
 
-    <style type="text/css">
-      #TOC {
-        margin: 25px 0px 20px 0px;
-      }
-      @media (max-width: 768px) {
-        #TOC {
-          position: relative;
-          width: 100%;
-        }
-      }
+<!-- tabsets -->
 
-      @media print {
-        .toc-content {
-          /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-          float: right;
-        }
-      }
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
 
-      .toc-content {
-        padding-left: 30px;
-        padding-right: 40px;
-      }
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
 
-      div.main-container {
-        max-width: 1200px;
-      }
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
 
-      div.tocify {
-        width: 20%;
-        max-width: 260px;
-        max-height: 85%;
-      }
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
 
-      @media (min-width: 768px) and (max-width: 991px) {
-        div.tocify {
-          width: 25%;
-        }
-      }
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
 
-      @media (max-width: 767px) {
-        div.tocify {
-          width: 100%;
-          max-width: none;
-        }
-      }
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
 
-      .tocify ul,
-      .tocify li {
-        line-height: 20px;
-      }
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
-      .tocify-subheader .tocify-item {
-        font-size: 0.9em;
-      }
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
-      .tocify .list-group-item {
-        border-radius: 0px;
-      }
-    </style>
-  </head>
 
-  <body>
-    <div class="container-fluid main-container">
-      <!-- setup 3col/9col grid for toc_float and main content  -->
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-3">
-          <div id="TOC" class="tocify"></div>
-        </div>
 
-        <div class="toc-content col-xs-12 col-sm-8 col-md-9">
-          <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Human Dura Atlas</a>
-              </div>
-              <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                  <li>
-                    <a href="index.html">Home</a>
-                  </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right"></ul>
-              </div>
-              <!--/.nav-collapse -->
-            </div>
-            <!--/.container -->
-          </div>
-          <!--/.navbar -->
+<style type="text/css">
 
-          <div id="header">
-            <div class="btn-group pull-right float-right">
-              <button
-                type="button"
-                class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle"
-                data-toggle="dropdown"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span>Code</span> <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px">
-                <li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
-                <li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
-              </ul>
-            </div>
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
 
-            <h1 class="title toc-ignore">Human Dura</h1>
-            <h4 class="date">2026-02-17</h4>
-          </div>
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
-          <pre class="r"><code>knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)</code></pre>
-          <div id="setup-and-environment" class="section level2">
-            <h2>1. Setup and Environment</h2>
-            <p>Load necessary packages and define global paths.</p>
-            <pre class="r"><code>#get started with seurat workflow
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Human Dura Atlas</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Human Dura</h1>
+<h4 class="date">2026-02-18</h4>
+
+</div>
+
+
+<pre class="r"><code>knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)</code></pre>
+<div id="setup-and-environment" class="section level2">
+<h2>1. Setup and Environment</h2>
+<p>Load necessary packages and define global paths.</p>
+<pre class="r"><code>#get started with seurat workflow
 library(Seurat)
 library(ggplot2)
 library(readxl)
@@ -438,30 +416,19 @@ library(readr)
 
 #milo
 library(miloR)
-library(miloDE)
-
-
-samples_seurat &lt;- qread(&quot;39.0_samples_seurat_all.qs&quot;)
-
-# Point 11.1-11.4.4
-Bc_all_seurat &lt;- qread(&quot;39.0_samples_seurat_reclustered_Bc_subset&quot;)
-
-# Point 15.1-15.9.1
-Fibro_main_seurat &lt;- qread(&quot;39.0_samples_seurat_reclustered_Fibro_subset&quot;)
-
-# point 14.1-14.6.3
-myeloid_main_seurat &lt;- qread(&quot;39.0_samples_seurat_reclustered_myeloid_subset&quot;)</code></pre>
-          </div>
-          <div id="load-raw-data" class="section level2">
-            <h2>1.2 Load Raw Data</h2>
-            <p><em>Note: The code below outlines the process for loading raw data, but assumes pre-processed objects are used in this report.</em></p>
-            <pre class="r"><code>#download h5 files from GEO
+library(miloDE)</code></pre>
+</div>
+<div id="load-raw-data" class="section level2">
+<h2>1.2 Load Raw Data</h2>
+<p><em>Note: The code below outlines the process for loading raw data,
+but assumes pre-processed objects are used in this report.</em></p>
+<pre class="r"><code>#download h5 files from GEO
 #load individual samples with Read10x_h5() function</code></pre>
-          </div>
-          <div id="define-sample-names" class="section level2">
-            <h2>1.3 Define Sample Names</h2>
-            <p>Define sample identifiers and create the initial list of objects.</p>
-            <pre class="r"><code>sample_names &lt;- c(&quot;M43_P9&quot;, &quot;C97_H_P9&quot;, &quot;M98_H_P9 &quot;, #Pool 9
+</div>
+<div id="define-sample-names" class="section level2">
+<h2>1.3 Define Sample Names</h2>
+<p>Define sample identifiers and create the initial list of objects.</p>
+<pre class="r"><code>sample_names &lt;- c(&quot;M43_P9&quot;, &quot;C97_H_P9&quot;, &quot;M98_H_P9 &quot;, #Pool 9
                   &quot;C76_H_P9_10 &quot;, #Pool9+10
                   &quot;M47_P10&quot;, &quot;C115_H_P10&quot;, &quot;M3509_P10 &quot;, #Pool10
                   &quot;M31_P11&quot;, &quot;C54_P11&quot;, &quot;C3606_P11&quot;, &quot;M3867_P11&quot;, #Pool11
@@ -479,25 +446,27 @@ samples &lt;- list(M43_P9, C97_H_P9, M98_H_P9, #Pool 9
                 C40_P13, C57_H_P13, M69_P13, M82_H_P13, #Pool13
                 C61_P14, M94_H_P14, M99_H_P14, C3590_P14 #Pool14
 )|&gt; setNames(sample_names)</code></pre>
-          </div>
-          <div id="initialize-seurat-objects" class="section level2">
-            <h2>1.4 Initialize Seurat Objects</h2>
-            <p>Create Seurat objects for each sample and assign unique cell identifiers.</p>
-            <pre class="r"><code>samples &lt;- mapply(function(x, nm) {
+</div>
+<div id="initialize-seurat-objects" class="section level2">
+<h2>1.4 Initialize Seurat Objects</h2>
+<p>Create Seurat objects for each sample and assign unique cell
+identifiers.</p>
+<pre class="r"><code>samples &lt;- mapply(function(x, nm) {
   obj &lt;- CreateSeuratObject(x, project = nm)
   obj &lt;- RenameCells(obj, add.cell.id = nm)   # make cell names unique per sample
   obj$sample &lt;- nm                            # add sample name to metadata
   return(obj)
 }, samples, names(samples), SIMPLIFY = FALSE)</code></pre>
-          </div>
-          <div id="quality-control-qc" class="section level2">
-            <h2>2. Quality Control (QC)</h2>
-            <p>Calculate and visualize QC metrics to identify low-quality cells.</p>
-          </div>
-          <div id="calculate-qc-metrics" class="section level2">
-            <h2>2.1 Calculate QC Metrics</h2>
-            <p>Calculate mitochondrial, ribosomal, and erythrocyte gene percentages.</p>
-            <pre class="r"><code>for (i in seq_along(samples)) {
+</div>
+<div id="quality-control-qc" class="section level2">
+<h2>2. Quality Control (QC)</h2>
+<p>Calculate and visualize QC metrics to identify low-quality cells.</p>
+</div>
+<div id="calculate-qc-metrics" class="section level2">
+<h2>2.1 Calculate QC Metrics</h2>
+<p>Calculate mitochondrial, ribosomal, and erythrocyte gene
+percentages.</p>
+<pre class="r"><code>for (i in seq_along(samples)) {
   samples[[i]][[&quot;percent_mito&quot;]] &lt;- PercentageFeatureSet(samples[[i]], pattern = &quot;^MT-&quot;)
   samples[[i]][[&quot;percent_ribo&quot;]] &lt;- PercentageFeatureSet(samples[[i]], pattern = &quot;^RP[SLP]&quot;)
   samples[[i]][[&quot;percent_ery&quot;]] &lt;- PercentageFeatureSet(samples[[i]], pattern = &quot;^HB[AB]&quot;)
@@ -519,17 +488,18 @@ for (i in seq_along(samples)) {
     Percent_Ery = mean(samples[[i]]$percent_ery, na.rm = TRUE)
   )
 }</code></pre>
-          </div>
-          <div id="save-pre-filtering-qc-stats" class="section level2">
-            <h2>2.2 Save Pre-filtering QC Stats</h2>
-            <p>Save the QC statistics to an Excel file.</p>
-            <pre class="r"><code>qc_summary_before &lt;- do.call(rbind, qc_data)
+</div>
+<div id="save-pre-filtering-qc-stats" class="section level2">
+<h2>2.2 Save Pre-filtering QC Stats</h2>
+<p>Save the QC statistics to an Excel file.</p>
+<pre class="r"><code>qc_summary_before &lt;- do.call(rbind, qc_data)
 openxlsx::write.xlsx(qc_summary_before, file = file.path(result_dir, &quot;2.2_cell_count_preQC.xlsx&quot;), rowNames = FALSE)</code></pre>
-          </div>
-          <div id="visualize-pre-filtering-qc" class="section level2">
-            <h2>2.3 Visualize Pre-filtering QC</h2>
-            <p>Visualize QC metrics (nFeature, nCount, Percent Mito, etc.) using violin plots.</p>
-            <pre class="r"><code>#create QC plots before filtering seperated
+</div>
+<div id="visualize-pre-filtering-qc" class="section level2">
+<h2>2.3 Visualize Pre-filtering QC</h2>
+<p>Visualize QC metrics (nFeature, nCount, Percent Mito, etc.) using
+violin plots.</p>
+<pre class="r"><code>#create QC plots before filtering seperated
 # pdf(&quot;2.3_pre_QC_ViolinPlots_seperated.pdf&quot;, width=11.69, height=8.27)
 for (i in seq_along(samples)){
   print(VlnPlot(samples[[i]], features = c(&quot;nFeature_RNA&quot;, &quot;nCount_RNA&quot;, &quot;percent_mito&quot;,&quot;percent_ribo&quot;, &quot;percent_ery&quot;), ncol = 5))
@@ -543,26 +513,30 @@ VlnPlot(
   combined_samples, features = c(&quot;nFeature_RNA&quot;, &quot;nCount_RNA&quot;, &quot;percent_mito&quot;, &quot;percent_ribo&quot;, &quot;percent_ery&quot;), group.by = &quot;sample_id&quot;, pt.size = 0.1, ncol = 2
 )
 # dev.off()</code></pre>
-          </div>
-          <div id="doublet-detection" class="section level2">
-            <h2>2.4 Doublet Detection</h2>
-            <p>Use <code>scDblFinder</code> to identify and mark potential doublet cells.</p>
-            <pre class="r"><code>#use scDblFinder to exclude doublets
+</div>
+<div id="doublet-detection" class="section level2">
+<h2>2.4 Doublet Detection</h2>
+<p>Use <code>scDblFinder</code> to identify and mark potential doublet
+cells.</p>
+<pre class="r"><code>#use scDblFinder to exclude doublets
 for (i in seq_along(samples)){
   samples_sce &lt;- lapply(samples, as.SingleCellExperiment)
   samples_sce &lt;- lapply(samples_sce, scDblFinder)
   samples[[i]][[&quot;scDblFinder.score&quot;]] &lt;- samples_sce[[i]][[&quot;scDblFinder.score&quot;]]
   samples[[i]][[&quot;scDblFinder.class&quot;]] &lt;- samples_sce[[i]][[&quot;scDblFinder.class&quot;]]
 }</code></pre>
-          </div>
-          <div id="data-filtering" class="section level2">
-            <h2>3. Data Filtering</h2>
-            <p>Remove low-quality cells based on the calculated QC metrics and doublet status.</p>
-          </div>
-          <div id="apply-qc-filters" class="section level2">
-            <h2>3.1 Apply QC Filters</h2>
-            <p>Filter cells based on feature counts, mitochondrial/ribosomal/erythrocyte content, and doublet classification.</p>
-            <pre class="r"><code>samples_filteredQC &lt;- lapply(samples, function(s) {
+</div>
+<div id="data-filtering" class="section level2">
+<h2>3. Data Filtering</h2>
+<p>Remove low-quality cells based on the calculated QC metrics and
+doublet status.</p>
+</div>
+<div id="apply-qc-filters" class="section level2">
+<h2>3.1 Apply QC Filters</h2>
+<p>Filter cells based on feature counts,
+mitochondrial/ribosomal/erythrocyte content, and doublet
+classification.</p>
+<pre class="r"><code>samples_filteredQC &lt;- lapply(samples, function(s) {
   keep &lt;- s[[&quot;nFeature_RNA&quot;]] &gt; 200 &amp;
     s[[&quot;nFeature_RNA&quot;]] &lt; 4000 &amp;
     s[[&quot;nCount_RNA&quot;]] &lt; 8000 &amp;
@@ -579,11 +553,11 @@ for (i in seq_along(samples)){
 })
 which(sapply(samples_filteredQC, is.null))
 samples_filteredQC &lt;- Filter(Negate(is.null), samples_filteredQC)</code></pre>
-          </div>
-          <div id="save-post-filtering-statistics" class="section level2">
-            <h2>3.2 Save Post-filtering Statistics</h2>
-            <p>Save the QC statistics for the filtered dataset.</p>
-            <pre class="r"><code># Create a list to store QC data
+</div>
+<div id="save-post-filtering-statistics" class="section level2">
+<h2>3.2 Save Post-filtering Statistics</h2>
+<p>Save the QC statistics for the filtered dataset.</p>
+<pre class="r"><code># Create a list to store QC data
 qc_data_after &lt;- list()
 for (sample_name in names(samples_filteredQC)) {
   qc_data_after[[sample_name]] &lt;- data.frame(
@@ -596,33 +570,34 @@ for (sample_name in names(samples_filteredQC)) {
 }
 qc_summary_after &lt;- do.call(rbind, qc_data_after)
 write.xlsx(qc_summary_after, file = file.path(result_dir, &quot;3.2_cell_count_postQC.xlsx&quot;), rowNames = FALSE)</code></pre>
-          </div>
-          <div id="visualize-post-filtering-qc" class="section level2">
-            <h2>3.3 Visualize Post-filtering QC</h2>
-            <p>Visualize QC metrics for the filtered dataset.</p>
-            <pre class="r"><code>combined_filtered &lt;- Reduce(function(x, y) merge(x, y), samples_filteredQC)
+</div>
+<div id="visualize-post-filtering-qc" class="section level2">
+<h2>3.3 Visualize Post-filtering QC</h2>
+<p>Visualize QC metrics for the filtered dataset.</p>
+<pre class="r"><code>combined_filtered &lt;- Reduce(function(x, y) merge(x, y), samples_filteredQC)
 # pdf(file.path(result_dir, &quot;3.3_post_QC_ViolinPlots.pdf&quot;), width = 30, height = 25)
 print(VlnPlot(
   combined_filtered, features = c(&quot;nFeature_RNA&quot;, &quot;nCount_RNA&quot;, &quot;percent_mito&quot;, &quot;percent_ribo&quot;, &quot;percent_ery&quot;), group.by = &quot;sample_id&quot;, pt.size = 0.1, ncol = 2
 ))
 # dev.off()</code></pre>
-          </div>
-          <div id="normalization-and-integration" class="section level2">
-            <h2>4. Normalization and Integration</h2>
-            <p>Perform SCTransform normalization and integrate datasets using RPCA.</p>
-            <pre class="r"><code>### ran on the HPC cluster</code></pre>
-          </div>
-          <div id="sctransform" class="section level2">
-            <h2>4.1 SCTransform</h2>
-            <p>Normalize data using SCTransform.</p>
-            <pre class="r"><code>samples_SCT &lt;- lapply(samples_filteredQC, SCTransform, vst.flavor = &quot;v2&quot;, verbose = T) |&gt;
+</div>
+<div id="normalization-and-integration" class="section level2">
+<h2>4. Normalization and Integration</h2>
+<p>Perform SCTransform normalization and integrate datasets using
+RPCA.</p>
+<pre class="r"><code>### ran on the HPC cluster</code></pre>
+</div>
+<div id="sctransform" class="section level2">
+<h2>4.1 SCTransform</h2>
+<p>Normalize data using SCTransform.</p>
+<pre class="r"><code>samples_SCT &lt;- lapply(samples_filteredQC, SCTransform, vst.flavor = &quot;v2&quot;, verbose = T) |&gt;
   lapply(RunPCA, npcs = 30, verbose = T)
 qsave(samples_SCT, file.path(result_dir, &quot;4.1_samples_SCT.qs&quot;))</code></pre>
-          </div>
-          <div id="rpca-integration" class="section level2">
-            <h2>4.2 RPCA Integration</h2>
-            <p>Integrate samples using Reciprocal PCA (RPCA).</p>
-            <pre class="r"><code>features &lt;- SelectIntegrationFeatures(object.list = samples_SCT, nfeatures = 3000)
+</div>
+<div id="rpca-integration" class="section level2">
+<h2>4.2 RPCA Integration</h2>
+<p>Integrate samples using Reciprocal PCA (RPCA).</p>
+<pre class="r"><code>features &lt;- SelectIntegrationFeatures(object.list = samples_SCT, nfeatures = 3000)
 samples_SCT &lt;- PrepSCTIntegration(samples_SCT, anchor.features = features)
 anchors &lt;- FindIntegrationAnchors(samples_SCT, normalization.method = &quot;SCT&quot;,anchor.features = features, reduction = &quot;rpca&quot;)
 qsave(anchors, file.path(result_dir, &quot;4.2_integration_anchors_rpca.qs&quot;))
@@ -631,15 +606,15 @@ samples_combined &lt;- IntegrateData(anchors, normalization.method = &quot;SCT&q
 qsave(samples_combined, file.path(result_dir, &quot;4.2_samples_combined_rpca.qs&quot;))
 
 # ===== 5. Clustering &amp; marker genes =====</code></pre>
-          </div>
-          <div id="clustering-and-marker-genes" class="section level2">
-            <h2>5. Clustering and Marker Genes</h2>
-            <p>Cluster cells and identify marker genes for each cluster.</p>
-          </div>
-          <div id="clustering-and-umap" class="section level2">
-            <h2>5.1 Clustering and UMAP</h2>
-            <p>Perform graph-based clustering and visualize results using UMAP.</p>
-            <pre class="r"><code>#use Seurat 5.1 (because e.g. Azimuth is not working with Seurat 5.3)
+</div>
+<div id="clustering-and-marker-genes" class="section level2">
+<h2>5. Clustering and Marker Genes</h2>
+<p>Cluster cells and identify marker genes for each cluster.</p>
+</div>
+<div id="clustering-and-umap" class="section level2">
+<h2>5.1 Clustering and UMAP</h2>
+<p>Perform graph-based clustering and visualize results using UMAP.</p>
+<pre class="r"><code>#use Seurat 5.1 (because e.g. Azimuth is not working with Seurat 5.3)
 samples_combined &lt;- FindNeighbors(samples_combined, dims = 1:30)
 resolution_check &lt;- FindClusters(samples_combined, resolution = c(0.2, 0.4, 0.6, 0.7, 0.8, 1.0, 1.2))
 tree &lt;- clustree(resolution_check)
@@ -652,11 +627,11 @@ DimPlot(samples_seurat, label = T)
 qsave(samples_seurat, file.path(result_dir, &quot;5.1_samples_seurat_res0.7.qs&quot;))
 
 rm(resolution_check, samples_combined, tree)</code></pre>
-          </div>
-          <div id="find-marker-genes" class="section level2">
-            <h2>5.2 Find Marker Genes</h2>
-            <p>Identify marker genes for each cluster using the SCT assay.</p>
-            <pre class="r"><code>#Idents(samples_seurat) &lt;- &quot;annotated&quot; #change later if I have decided for annotation
+</div>
+<div id="find-marker-genes" class="section level2">
+<h2>5.2 Find Marker Genes</h2>
+<p>Identify marker genes for each cluster using the SCT assay.</p>
+<pre class="r"><code>#Idents(samples_seurat) &lt;- &quot;annotated&quot; #change later if I have decided for annotation
 Idents(samples_seurat) &lt;- &quot;seurat_clusters&quot;
 samples_seurat &lt;- PrepSCTFindMarkers(samples_seurat)
 markers &lt;- FindAllMarkers(samples_seurat, assay = &quot;SCT&quot;, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25)
@@ -666,11 +641,12 @@ marker_list &lt;- split(markers_sorted, markers_sorted$cluster)
 write.xlsx(marker_list, file = &quot;5.2_Cluster_Markers.xlsx&quot;)
 
 rm(marker_list, markers, markers_sorted)</code></pre>
-          </div>
-          <div id="cluster-cell-counts" class="section level2">
-            <h2>5.3 Cluster Cell Counts</h2>
-            <p>Calculate and export cell counts and percentages per cluster across different conditions.</p>
-            <pre class="r"><code>samples_seurat$annotated &lt;- samples_seurat$seurat_clusters #changed later wiith right annotation --&gt; step.6 and 7
+</div>
+<div id="cluster-cell-counts" class="section level2">
+<h2>5.3 Cluster Cell Counts</h2>
+<p>Calculate and export cell counts and percentages per cluster across
+different conditions.</p>
+<pre class="r"><code>samples_seurat$annotated &lt;- samples_seurat$seurat_clusters #changed later wiith right annotation --&gt; step.6 and 7
 Idents(samples_seurat) &lt;- &quot;annotated&quot;
 
 overall_counts &lt;- table(samples_seurat$annotated)
@@ -727,19 +703,20 @@ write_xlsx(
 
 #clean enviornment
 rm(cohort_df, cohort_percent_df, condition_df, condition_percent_df, overall_df, sample_df, sample_percent_df, cohort_counts, overall_counts, sample_counts, calc_column_percent, biobank_df, biobank_percent_df, biobank_counts, diagnosis_df, diagnosis_percent_df)</code></pre>
-          </div>
-          <div id="metadata-processing" class="section level2">
-            <h2>6. Metadata Processing</h2>
-            <p>Clean and update sample metadata.</p>
-            <pre class="r"><code>#three samples had spaces in their samples_ID --&gt; need to be removed
+</div>
+<div id="metadata-processing" class="section level2">
+<h2>6. Metadata Processing</h2>
+<p>Clean and update sample metadata.</p>
+<pre class="r"><code>#three samples had spaces in their samples_ID --&gt; need to be removed
 samples_seurat@meta.data$sample_id[samples_seurat@meta.data$sample_id == &quot;M98_H_P9 &quot;] &lt;- &quot;M98_H_P9&quot;
 samples_seurat@meta.data$sample_id[samples_seurat@meta.data$sample_id == &quot;C76_H_P9_10 &quot;] &lt;- &quot;C76_H_P9_10&quot;
 samples_seurat@meta.data$sample_id[samples_seurat@meta.data$sample_id == &quot;M3509_P10 &quot;] &lt;- &quot;M3509_P10&quot;</code></pre>
-          </div>
-          <div id="add-patient-information" class="section level2">
-            <h2>6.1 Add Patient Information</h2>
-            <p>Integrate patient-level information (age, sex, condition) into the single-cell object.</p>
-            <pre class="r"><code>patient_info &lt;- openxlsx::read.xlsx(&quot;patient_info.xlsx&quot;) #you can use Supplement Figure 1
+</div>
+<div id="add-patient-information" class="section level2">
+<h2>6.1 Add Patient Information</h2>
+<p>Integrate patient-level information (age, sex, condition) into the
+single-cell object.</p>
+<pre class="r"><code>patient_info &lt;- openxlsx::read.xlsx(&quot;patient_info.xlsx&quot;) #you can use Supplement Figure 1
 #add meta.data
 meta &lt;- samples_seurat@meta.data
 # Add cell name as a new column for subsequent reassignment
@@ -761,13 +738,11 @@ samples_seurat@meta.data$diagnosis &lt;- as.factor(samples_seurat@meta.data$diag
 samples_seurat@meta.data$cohort &lt;- as.factor(samples_seurat@meta.data$cohort)
 
 rm(meta, meta_new, patient_info)</code></pre>
-          </div>
-          <div id="add-cell-annotations" class="section level2">
-            <h2>6.2 Add Cell Annotations</h2>
-            <p>Assign biological annotations to clusters based on marker genes.</p>
-            <pre
-              class="r"
-            ><code>samples_seurat$annotated &lt;- recode(samples_seurat$seurat_clusters, &quot;0&quot; = &quot;duraFibro4&quot;, &quot;1&quot; = &quot;duraFibro1&quot;, &quot;2&quot; = &quot;CAM&quot;, &quot;3&quot; = &quot;duraFibro3&quot;, &quot;4&quot; = &quot;vSMC1&quot;, &quot;5&quot; = &quot;capEndo&quot;, &quot;6&quot; = &quot;vascFibro&quot;, &quot;7&quot; = &quot;venEndo&quot;, &quot;8&quot; = &quot;Tc&quot;, &quot;9&quot; = &quot;artEndo&quot;, &quot;10&quot; = &quot;duraFibro7&quot;, &quot;11&quot; = &quot;vSMC2&quot;, &quot;12&quot; = &quot;duraFibro2&quot;, &quot;13&quot; = &quot;Myeloid1&quot;, &quot;14&quot; = &quot;Myeloid5&quot;, &quot;15&quot; = &quot;arach_bordFibro&quot;, &quot;16&quot; = &quot;Peri&quot;, &quot;17&quot; = &quot;Myeloid3&quot;, &quot;18&quot; = &quot;Myeloid2&quot;, &quot;19&quot; = &quot;duraFibro8&quot;, &quot;20&quot; = &quot;duraFibro5&quot;, &quot;21&quot; = &quot;ABC&quot;, &quot;22&quot; = &quot;mixVascStroma&quot;, &quot;23&quot; = &quot;mixEndo&quot;, &quot;24&quot; = &quot;Bc&quot;, &quot;25&quot; = &quot;Myeloid4&quot;, &quot;26&quot; = &quot;Mast&quot;, &quot;27&quot; = &quot;duraFibro6&quot;, &quot;28&quot; = &quot;IFN-CAM&quot;)
+</div>
+<div id="add-cell-annotations" class="section level2">
+<h2>6.2 Add Cell Annotations</h2>
+<p>Assign biological annotations to clusters based on marker genes.</p>
+<pre class="r"><code>samples_seurat$annotated &lt;- recode(samples_seurat$seurat_clusters, &quot;0&quot; = &quot;duraFibro4&quot;, &quot;1&quot; = &quot;duraFibro1&quot;, &quot;2&quot; = &quot;CAM&quot;, &quot;3&quot; = &quot;duraFibro3&quot;, &quot;4&quot; = &quot;vSMC1&quot;, &quot;5&quot; = &quot;capEndo&quot;, &quot;6&quot; = &quot;vascFibro&quot;, &quot;7&quot; = &quot;venEndo&quot;, &quot;8&quot; = &quot;Tc&quot;, &quot;9&quot; = &quot;artEndo&quot;, &quot;10&quot; = &quot;duraFibro7&quot;, &quot;11&quot; = &quot;vSMC2&quot;, &quot;12&quot; = &quot;duraFibro2&quot;, &quot;13&quot; = &quot;Myeloid1&quot;, &quot;14&quot; = &quot;Myeloid5&quot;, &quot;15&quot; = &quot;arach_bordFibro&quot;, &quot;16&quot; = &quot;Peri&quot;, &quot;17&quot; = &quot;Myeloid3&quot;, &quot;18&quot; = &quot;Myeloid2&quot;, &quot;19&quot; = &quot;duraFibro8&quot;, &quot;20&quot; = &quot;duraFibro5&quot;, &quot;21&quot; = &quot;ABC&quot;, &quot;22&quot; = &quot;mixVascStroma&quot;, &quot;23&quot; = &quot;mixEndo&quot;, &quot;24&quot; = &quot;Bc&quot;, &quot;25&quot; = &quot;Myeloid4&quot;, &quot;26&quot; = &quot;Mast&quot;, &quot;27&quot; = &quot;duraFibro6&quot;, &quot;28&quot; = &quot;IFN-CAM&quot;)
 
 samples_seurat$main_groups &lt;- recode(samples_seurat$seurat_clusters, &quot;0&quot; = &quot;duraFibro&quot;, &quot;1&quot; = &quot;duraFibro&quot;, &quot;2&quot; = &quot;Myeloid&quot;, &quot;3&quot; = &quot;duraFibro&quot;, &quot;4&quot; = &quot;vascStroma&quot;, &quot;5&quot; = &quot;Endo&quot;, &quot;6&quot; = &quot;vascStroma&quot;, &quot;7&quot; = &quot;Endo&quot;, &quot;8&quot; = &quot;Tc&quot;, &quot;9&quot; = &quot;Endo&quot;, &quot;10&quot; = &quot;duraFibro&quot;, &quot;11&quot; = &quot;vascStroma&quot;, &quot;12&quot; = &quot;duraFibro&quot;, &quot;13&quot; = &quot;Myeloid&quot;, &quot;14&quot; = &quot;Myeloid&quot;, &quot;15&quot; = &quot;arach_bordFibro&quot;, &quot;16&quot; = &quot;vascStroma&quot;, &quot;17&quot; = &quot;Myeloid&quot;, &quot;18&quot; = &quot;Myeloid&quot;, &quot;19&quot; = &quot;duraFibro&quot;, &quot;20&quot; = &quot;duraFibro&quot;, &quot;21&quot; = &quot;ABC&quot;, &quot;22&quot; = &quot;vascStroma&quot;, &quot;23&quot; = &quot;Endo&quot;, &quot;24&quot; = &quot;Bc&quot;, &quot;25&quot; = &quot;Myeloid&quot;, &quot;26&quot; = &quot;Myeloid&quot;, &quot;27&quot; = &quot;duraFibro&quot;, &quot;28&quot; = &quot;Myeloid&quot;)
 cluster_order &lt;- c(&quot;ABC&quot;, &quot;arach_bordFibro&quot;, &quot;duraFibro&quot;, &quot;vascStroma&quot;, &quot;Endo&quot;, &quot;Myeloid&quot;, &quot;Tc&quot;, &quot;Bc&quot;)
@@ -775,11 +750,11 @@ samples_seurat@meta.data$main_groups &lt;- factor(samples_seurat@meta.data$main_
 Idents(samples_seurat) &lt;- samples_seurat@meta.data$main_groups
 Idents(samples_seurat) &lt;- &quot;main_groups&quot;
 DefaultAssay(samples_seurat) &lt;- &quot;SCT&quot;</code></pre>
-          </div>
-          <div id="define-cluster-colors" class="section level2">
-            <h2>6.3 Define Cluster Colors</h2>
-            <p>Define custom color palettes for visualization.</p>
-            <pre class="r"><code>#extract colors
+</div>
+<div id="define-cluster-colors" class="section level2">
+<h2>6.3 Define Cluster Colors</h2>
+<p>Define custom color palettes for visualization.</p>
+<pre class="r"><code>#extract colors
 p &lt;- DimPlot(samples_seurat, group.by = &quot;annotated&quot;)
 cluster_colors &lt;- ggplot_build(p)$data[[1]]$colour
 cluster_ids &lt;- p$data$annotated
@@ -829,23 +804,22 @@ cluster_colors &lt;- c( &quot;ABC&quot; = &quot;#9584bd&quot;,
                      &quot;Myeloid&quot; = &quot;#e04c73&quot;,
                      &quot;Bc&quot; = &quot;#bf72ad&quot;,
                      &quot;Tc&quot; = &quot;#dd4e10&quot;)</code></pre>
-          </div>
-          <div id="define-cluster-order" class="section level2">
-            <h2>6.4 Define Cluster Order</h2>
-            <p>Set the order of clusters for plotting consistency.</p>
-            <pre
-              class="r"
-            ><code>ccluster_order &lt;- c(&quot;artEndo&quot;, &quot;capEndo&quot;, &quot;venEndo&quot;, &quot;mixEndo&quot;, &quot;vSMC1&quot;, &quot;vSMC2&quot;, &quot;Peri&quot;, &quot;mixVascStroma&quot;, &quot;vascFibro&quot;, &quot;Tc&quot;, &quot;Bc&quot;, &quot;CAM&quot;, &quot;IFN-CAM&quot;, &quot;inflamMono1&quot;, &quot;inflamMono2&quot;, &quot;inflamMono3&quot;, &quot;Granulo&quot;, &quot;mixMyeloid&quot;, &quot;Mast&quot;,&quot;ABC&quot;, &quot;arach_bordFibro&quot;, &quot;duraFibro1&quot;, &quot;duraFibro2&quot;, &quot;duraFibro3&quot;, &quot;duraFibro4&quot;, &quot;duraFibro5&quot;, &quot;duraFibro6&quot;, &quot;duraFibro7&quot;, &quot;duraFibro8&quot;)
+</div>
+<div id="define-cluster-order" class="section level2">
+<h2>6.4 Define Cluster Order</h2>
+<p>Set the order of clusters for plotting consistency.</p>
+<pre class="r"><code>ccluster_order &lt;- c(&quot;artEndo&quot;, &quot;capEndo&quot;, &quot;venEndo&quot;, &quot;mixEndo&quot;, &quot;vSMC1&quot;, &quot;vSMC2&quot;, &quot;Peri&quot;, &quot;mixVascStroma&quot;, &quot;vascFibro&quot;, &quot;Tc&quot;, &quot;Bc&quot;, &quot;CAM&quot;, &quot;IFN-CAM&quot;, &quot;inflamMono1&quot;, &quot;inflamMono2&quot;, &quot;inflamMono3&quot;, &quot;Granulo&quot;, &quot;mixMyeloid&quot;, &quot;Mast&quot;,&quot;ABC&quot;, &quot;arach_bordFibro&quot;, &quot;duraFibro1&quot;, &quot;duraFibro2&quot;, &quot;duraFibro3&quot;, &quot;duraFibro4&quot;, &quot;duraFibro5&quot;, &quot;duraFibro6&quot;, &quot;duraFibro7&quot;, &quot;duraFibro8&quot;)
 cluster_order &lt;- rev(cluster_order)
 samples_seurat@meta.data$annotated &lt;- factor(samples_seurat@meta.data$annotated, levels = cluster_order)
 Idents(samples_seurat) &lt;- samples_seurat@meta.data$annotated
 
 qsave(samples_seurat, file.path(result_dir, &quot;6.4_samples_combined_meta_data.qs&quot;))</code></pre>
-          </div>
-          <div id="patient-demographics-age-sex-pmd" class="section level2">
-            <h2>6.5 Patient Demographics (Age, Sex, PMD)</h2>
-            <p>Analyze and visualize the distribution of age, sex, and post-mortem delay (PMD) across conditions.</p>
-            <pre class="r"><code># Create sample metadata
+</div>
+<div id="patient-demographics-age-sex-pmd" class="section level2">
+<h2>6.5 Patient Demographics (Age, Sex, PMD)</h2>
+<p>Analyze and visualize the distribution of age, sex, and post-mortem
+delay (PMD) across conditions.</p>
+<pre class="r"><code># Create sample metadata
 sample_meta &lt;- samples_seurat@meta.data %&gt;%
   dplyr::select(sample_id, condition, age, sex, pmd_h) %&gt;%
   distinct()
@@ -951,11 +925,12 @@ ggplot(sample_meta, aes(x = condition, y = pmd_h, fill = condition)) +
     hjust = 0.5
   )
 # dev.off()</code></pre>
-          </div>
-          <div id="summary-statistics" class="section level2">
-            <h2>6.6 Summary Statistics</h2>
-            <p>Calculate total cells, cells per condition, and average genes per cell.</p>
-            <pre class="r"><code>#total cells
+</div>
+<div id="summary-statistics" class="section level2">
+<h2>6.6 Summary Statistics</h2>
+<p>Calculate total cells, cells per condition, and average genes per
+cell.</p>
+<pre class="r"><code>#total cells
 ncol(samples_seurat)
 #245730
 
@@ -971,15 +946,18 @@ mean(samples_seurat$nFeature_RNA)
 #cells per sample
 round(mean(table(samples_seurat$sample_id)))
 #10,684</code></pre>
-          </div>
-          <div id="cluster-abundance-analysis-confounder-adjusted" class="section level2">
-            <h2>7. Cluster Abundance Analysis (Confounder Adjusted)</h2>
-            <p>Analyze changes in cluster abundance while adjusting for confounding variables.</p>
-          </div>
-          <div id="data-preparation" class="section level2">
-            <h2>7.1 Data Preparation</h2>
-            <p>Prepare metadata and count matrices for abundance analysis, accounting for age, sex, cohort, and pool.</p>
-            <pre class="r"><code># Extract metadata and ensure all required variables are present
+</div>
+<div id="cluster-abundance-analysis-confounder-adjusted"
+class="section level2">
+<h2>7. Cluster Abundance Analysis (Confounder Adjusted)</h2>
+<p>Analyze changes in cluster abundance while adjusting for confounding
+variables.</p>
+</div>
+<div id="data-preparation" class="section level2">
+<h2>7.1 Data Preparation</h2>
+<p>Prepare metadata and count matrices for abundance analysis,
+accounting for age, sex, cohort, and pool.</p>
+<pre class="r"><code># Extract metadata and ensure all required variables are present
 meta_confounders &lt;- samples_seurat@meta.data %&gt;%
   dplyr::select(sample_id, condition, cohort, pool, annotated, age, sex) %&gt;%
   # Remove rows with missing confounder data
@@ -1008,11 +986,13 @@ rownames(sample_meta) &lt;- sample_meta$sample_id
 
 # Ensure same sample order
 sample_meta &lt;- sample_meta[rownames(count_matrix), ]</code></pre>
-          </div>
-          <div id="confounder-adjusted-differential-abundance" class="section level2">
-            <h2>7.2 Confounder-Adjusted Differential Abundance</h2>
-            <p>Run <code>propeller</code> analysis to identify differentially abundant cell types between MS and Ctrl, adjusting for confounders.</p>
-            <pre class="r"><code>run_propeller_with_confounders &lt;- function(count_data, sample_data, group_var, confounders, comparisons, output_file) {
+</div>
+<div id="confounder-adjusted-differential-abundance"
+class="section level2">
+<h2>7.2 Confounder-Adjusted Differential Abundance</h2>
+<p>Run <code>propeller</code> analysis to identify differentially
+abundant cell types between MS and Ctrl, adjusting for confounders.</p>
+<pre class="r"><code>run_propeller_with_confounders &lt;- function(count_data, sample_data, group_var, confounders, comparisons, output_file) {
 
   results_list &lt;- list()
 
@@ -1137,11 +1117,12 @@ results_confounders_pms &lt;- run_propeller_with_confounders(
   comparisons = comparisons,
   output_file = file.path(&quot;7.2_confounder_adjusted_propeller.pdf&quot;)
 )</code></pre>
-          </div>
-          <div id="confounder-adjusted-log2fc-analysis" class="section level2">
-            <h2>7.3 Confounder-Adjusted Log2FC Analysis</h2>
-            <p>Perform additional analysis on log2 fold changes, adjusted for confounders.</p>
-            <pre class="r"><code>run_propeller_with_confounders &lt;- function(count_data, sample_data, group_var, confounders, comparisons, output_file) {
+</div>
+<div id="confounder-adjusted-log2fc-analysis" class="section level2">
+<h2>7.3 Confounder-Adjusted Log2FC Analysis</h2>
+<p>Perform additional analysis on log2 fold changes, adjusted for
+confounders.</p>
+<pre class="r"><code>run_propeller_with_confounders &lt;- function(count_data, sample_data, group_var, confounders, comparisons, output_file) {
 
   results_list &lt;- list()
 
@@ -1262,15 +1243,17 @@ results_confounders_pms &lt;- run_propeller_with_confounders(
   comparisons = comparisons,
   output_file = file.path(&quot;7.3_confounder_adjusted_propeller_LogFC_all.pdf&quot;)
 )</code></pre>
-          </div>
-          <div id="cell-interaction-analysis-nichenet" class="section level2">
-            <h2>8. Cell Interaction Analysis (NicheNet)</h2>
-            <p>Predict ligand-receptor interactions between cell types using NicheNet.</p>
-          </div>
-          <div id="nichenet-analysis" class="section level2">
-            <h2>8.1 NicheNet Analysis</h2>
-            <p>Perform NicheNet analysis to identify potential intercellular communication.</p>
-            <pre class="r"><code>#convert Seurat to single cell experiment and define meta data
+</div>
+<div id="cell-interaction-analysis-nichenet" class="section level2">
+<h2>8. Cell Interaction Analysis (NicheNet)</h2>
+<p>Predict ligand-receptor interactions between cell types using
+NicheNet.</p>
+</div>
+<div id="nichenet-analysis" class="section level2">
+<h2>8.1 NicheNet Analysis</h2>
+<p>Perform NicheNet analysis to identify potential intercellular
+communication.</p>
+<pre class="r"><code>#convert Seurat to single cell experiment and define meta data
 sce &lt;- Seurat::as.SingleCellExperiment(samples_seurat, assay = &quot;SCT&quot;)
 sce &lt;- alias_to_symbol_SCE(sce, &quot;human&quot;) |&gt; makenames_SCE()
 
@@ -1472,11 +1455,11 @@ multinichenet_output = list(
 multinichenet_output = make_lite_output(multinichenet_output)
 
 saveRDS(multinichenet_output, file = &quot;8.1_multinichenet.rds&quot;)</code></pre>
-          </div>
-          <div id="circos-plot-visualization" class="section level2">
-            <h2>8.2 Circos Plot Visualization</h2>
-            <p>Visualize ligand-receptor interactions using Circos plots.</p>
-            <pre class="r"><code>#create plot for the top100 predictions
+</div>
+<div id="circos-plot-visualization" class="section level2">
+<h2>8.2 Circos Plot Visualization</h2>
+<p>Visualize ligand-receptor interactions using Circos plots.</p>
+<pre class="r"><code>#create plot for the top100 predictions
 prioritized_tbl_oi_all = get_top_n_lr_pairs(multinichenet_output$prioritization_tables, 100, rank_per_group = FALSE)
 
 prioritized_tbl_oi = multinichenet_output$prioritization_tables$group_prioritization_tbl %&gt;%
@@ -1550,11 +1533,11 @@ for(receiver in unique_receivers) {
 # dev.off()
 
 rm(abundance_df_summarized, abundance_expression_info, abundance_info, celltype_de, circos_list, contrast_tbl, de_genes_summary, DE_info, DE_info_emp, frq_list, grouping_tbl, ligand_activities_df, ligand_activities_targets_DEgenes, ligand_activity_summary, ligand_activity_down, ligand_target_matrix, ligand_target_matrix_test, lr_network, lr_target_prior_cor, metadata_combined, multinichenet_output, prioritization_tables, prioritized_tbl_oi, prioritized_tbl_oi_all, sce, sender_receiver_de, sender_receiver_tbl, subset_tbl, summary_ctrl, xlim_list, xlim_matrix, assay_oi_pb, batches, cell_colors, cell_types, celltype_id, celltypes_absent_one_condition, celltypes_present_one_condition, circos_text_y, colors_receiver, colors_sender, condition_specific_celltypes, condition_specific_celltypes_receivers, condition_specific_celltypes_senders, contrasts_oi, cores_system, covariates, de_method_oi, empirical_pval, findMarkers, fraction_cutoff, fun_oi_pb, group_id, ligand_activities_df, logFC_threshold, min_cells, min_sample_prop, n, n.cores, organism, p_val_adj, p_val_threshold, prioritizing_weights, prioritizing_weights_activity, prioritizing_weights_DE, prioritizing_weights_expression_specificity, prioritizing_weights_expression_specificity, prioritizing_weights_expression_sufficiency, receiver, receivers_oi, sample_id, scenario, sector, senario, senders_oi, senders_receivers, senders_receivers_missing, top_n_target, unique_receivers, verbose, circos_plot, prioritizing_weights_relative_abundance)</code></pre>
-          </div>
-          <div id="reference-dataset-comparison" class="section level2">
-            <h2>9. Reference Dataset Comparison</h2>
-            <p>Compare the current dataset with published reference datasets.</p>
-            <pre class="r"><code>#prepare human dura data
+</div>
+<div id="reference-dataset-comparison" class="section level2">
+<h2>9. Reference Dataset Comparison</h2>
+<p>Compare the current dataset with published reference datasets.</p>
+<pre class="r"><code>#prepare human dura data
 #save UMAP reduction (same UMAP as for previous analysis)
 umap_reduction &lt;- Embeddings(samples_seurat, &quot;umap&quot;)
 samples_seurat &lt;- RunUMAP(
@@ -1723,11 +1706,11 @@ U2 &lt;- FeaturePlot(fibros, features = &quot;predicted.celltype.score&quot;, re
 # pdf(&quot;9.0_DimPlot_ref_Plot_all_cells_pred.pdf&quot;, width = 8, height = 5)
 U1 + U2
 # dev.off()</code></pre>
-          </div>
-          <div id="endothelial-trajectory-analysis" class="section level2">
-            <h2>10. Endothelial Trajectory Analysis</h2>
-            <p>Analyze the developmental trajectory of endothelial cells.</p>
-            <pre class="r"><code>Endos_combined &lt;- subset(samples_seurat, idents = c(&quot;artEndo&quot;, &quot;capEndo&quot;, &quot;venEndo&quot;, &quot;mixEndo&quot;))
+</div>
+<div id="endothelial-trajectory-analysis" class="section level2">
+<h2>10. Endothelial Trajectory Analysis</h2>
+<p>Analyze the developmental trajectory of endothelial cells.</p>
+<pre class="r"><code>Endos_combined &lt;- subset(samples_seurat, idents = c(&quot;artEndo&quot;, &quot;capEndo&quot;, &quot;venEndo&quot;, &quot;mixEndo&quot;))
 
 #convert Seurat object into Monocle object
 #integrated and SCT (slot = &quot;scale.data&quot;) do not work as those are not saved as absolute values by Seurat but as differences from raw counts. So don&#39;t use scale.data
@@ -1856,14 +1839,16 @@ plot_genes_in_pseudotime(
 ) + scale_color_manual(values = cluster_colors)
 
 # dev.off()</code></pre>
-          </div>
-          <div id="b-cell-bc-analysis" class="section level2">
-            <h2>11. B-cell (Bc) Analysis</h2>
-            <p>Perform detailed analysis of B-cells, including reclustering, marker identification, differential expression, and trajectory analysis.</p>
-            <div id="b-cell-subset-and-reclustering" class="section level3">
-              <h3>11.0 B-cell Subset and Reclustering</h3>
-              <p>Isolate B-cells, re-integrate data (handling small samples separately), and perform clustering.</p>
-              <pre class="r"><code>#Bc subset and new integration ####
+</div>
+<div id="b-cell-bc-analysis" class="section level2">
+<h2>11. B-cell (Bc) Analysis</h2>
+<p>Perform detailed analysis of B-cells, including reclustering, marker
+identification, differential expression, and trajectory analysis.</p>
+<div id="b-cell-subset-and-reclustering" class="section level3">
+<h3>11.0 B-cell Subset and Reclustering</h3>
+<p>Isolate B-cells, re-integrate data (handling small samples
+separately), and perform clustering.</p>
+<pre class="r"><code>#Bc subset and new integration ####
 #### subset Bc cluster ####
 Bc_subset &lt;- subset(samples_seurat, idents = c(&quot;Bc&quot;))
 Bc_subset@assays$integrated &lt;- NULL
@@ -2058,11 +2043,11 @@ DimPlot(Bc_all_seurat, group.by = &quot;condition&quot;)
 # pdf(&quot;11.01_DimPlot_samples_group_Bc_all.pdf&quot;, width = 5, height = 5)
 DimPlot(Bc_all_seurat, group.by = &quot;sample_id&quot;)
 # dev.off()</code></pre>
-            </div>
-            <div id="marker-gene-identification" class="section level3">
-              <h3>11.1 Marker Gene Identification</h3>
-              <p>Identify marker genes for B-cell clusters.</p>
-              <pre class="r"><code>Idents(Bc_all_seurat) &lt;- &quot;seurat_clusters&quot;
+</div>
+<div id="marker-gene-identification" class="section level3">
+<h3>11.1 Marker Gene Identification</h3>
+<p>Identify marker genes for B-cell clusters.</p>
+<pre class="r"><code>Idents(Bc_all_seurat) &lt;- &quot;seurat_clusters&quot;
 DefaultAssay(Bc_all_seurat) &lt;- &quot;SCT&quot;
 
 # Fix umi.assay across all SCT models (works in v4 and v5)
@@ -2087,22 +2072,23 @@ marker_list &lt;- split(markers_sorted, markers_sorted$cluster)
 write.xlsx(marker_list, file = &quot;11.1_Bc_Cluster_Markers.xlsx&quot;)
 
 rm(marker_list, markers, markers_sorted)</code></pre>
-            </div>
-            <div id="plot-top-marker-genes" class="section level3">
-              <h3>11.1.1 Plot Top Marker Genes</h3>
-              <p>Visualize the top 5 marker genes using a dot plot.</p>
-              <pre class="r"><code>Idents(Bc_all_seurat) &lt;- &quot;seurat_clusters&quot;
+</div>
+<div id="plot-top-marker-genes" class="section level3">
+<h3>11.1.1 Plot Top Marker Genes</h3>
+<p>Visualize the top 5 marker genes using a dot plot.</p>
+<pre class="r"><code>Idents(Bc_all_seurat) &lt;- &quot;seurat_clusters&quot;
 DefaultAssay(Bc_all_seurat) &lt;- &quot;SCT&quot;
 genes&lt;- read_csv(&quot;marker_genes_Bc_top5.txt&quot;, col_names = FALSE)
 # pdf(&quot;11.1.1_DotPlot_marker_genes_Bc_top5.pdf&quot;, width = 12, heigh = 6)
 DotPlot(Bc_all_seurat, assay =&quot;SCT&quot;, features = genes)+
   scale_color_viridis_c()+RotatedAxis()
 # dev.off()</code></pre>
-            </div>
-            <div id="differential-expression-de-analysis" class="section level3">
-              <h3>11.3 Differential Expression (DE) Analysis</h3>
-              <p>Perform DE analysis between MS and Control conditions for each B-cell cluster.</p>
-              <pre class="r"><code>Bc_all_seurat &lt;- qread(&quot;11.1_Bc_all_seurat_downstream_analysis.qs&quot;)
+</div>
+<div id="differential-expression-de-analysis" class="section level3">
+<h3>11.3 Differential Expression (DE) Analysis</h3>
+<p>Perform DE analysis between MS and Control conditions for each B-cell
+cluster.</p>
+<pre class="r"><code>Bc_all_seurat &lt;- qread(&quot;11.1_Bc_all_seurat_downstream_analysis.qs&quot;)
 DefaultAssay(Bc_all_seurat) &lt;- &quot;SCT&quot;
 Idents(Bc_all_seurat) &lt;- &quot;seurat_clusters&quot;
 Bc_all_seurat$annotated &lt;- factor(Bc_all_seurat$seurat_clusters)
@@ -2176,11 +2162,11 @@ for (comp_name in names(de_nested_list)) {
   write.xlsx(de_nested_list[[comp_name]], file = file_name)
   message(&quot;Saved: &quot;, file_name)
 }</code></pre>
-            </div>
-            <div id="volcano-plots-for-de-genes" class="section level3">
-              <h3>11.3.1 Volcano Plots for DE Genes</h3>
-              <p>Visualize DE results using volcano plots.</p>
-              <pre class="r"><code>de_file &lt;- &quot;11.3_DE_SCT_Bc_MS_vs_Ctrl.xlsx&quot;
+</div>
+<div id="volcano-plots-for-de-genes" class="section level3">
+<h3>11.3.1 Volcano Plots for DE Genes</h3>
+<p>Visualize DE results using volcano plots.</p>
+<pre class="r"><code>de_file &lt;- &quot;11.3_DE_SCT_Bc_MS_vs_Ctrl.xlsx&quot;
 
 all_clusters &lt;- getSheetNames(de_file)
 
@@ -2254,14 +2240,15 @@ for (cluster in all_clusters) {
 }
 
 rm(de_data, p, sig_genes, volcano_genes, all_clusters, cluster, de_file, n_down, n_up, out_file, sig, top_genes)</code></pre>
-            </div>
-            <div id="monocle-trajectory-analysis" class="section level3">
-              <h3>11.4 Monocle Trajectory Analysis</h3>
-              <p>Analyze B-cell developmental trajectories using Monocle3.</p>
-              <div id="pseudotime-calculation" class="section level4">
-                <h4>11.4.0 Pseudotime Calculation</h4>
-                <p>Convert Seurat object to Monocle3, learn trajectory graph, and order cells in pseudotime.</p>
-                <pre class="r"><code>#convert Seurat object into Monocle object
+</div>
+<div id="monocle-trajectory-analysis" class="section level3">
+<h3>11.4 Monocle Trajectory Analysis</h3>
+<p>Analyze B-cell developmental trajectories using Monocle3.</p>
+<div id="pseudotime-calculation" class="section level4">
+<h4>11.4.0 Pseudotime Calculation</h4>
+<p>Convert Seurat object to Monocle3, learn trajectory graph, and order
+cells in pseudotime.</p>
+<pre class="r"><code>#convert Seurat object into Monocle object
 #integrated and SCT (slot = &quot;scale.data&quot;) do not work as those are not saved as absolute values by Seurat but as differences from raw counts. So don&#39;t use scale.data
 #best is to use &quot;RNA&quot;, &quot;counts&quot;
 
@@ -2340,11 +2327,12 @@ ggplot(data.pseudo, aes(monocle3_pseudotime, reorder(annotated, monocle3_pseudot
 # dev.off()
 
 qsave(Bc_monocle, &quot;11.4.0_Bc_monocle.qs&quot;)</code></pre>
-              </div>
-              <div id="genes-changing-along-pseudotime" class="section level4">
-                <h4>11.4.1 Genes Changing Along Pseudotime</h4>
-                <p>Identify and visualize genes that change expression along the pseudotime trajectory.</p>
-                <pre class="r"><code>#find genes that change in pseudotime
+</div>
+<div id="genes-changing-along-pseudotime" class="section level4">
+<h4>11.4.1 Genes Changing Along Pseudotime</h4>
+<p>Identify and visualize genes that change expression along the
+pseudotime trajectory.</p>
+<pre class="r"><code>#find genes that change in pseudotime
 deg &lt;- graph_test(Bc_monocle, neighbor_graph = &quot;principal_graph&quot;, verbose = TRUE)
 deg |&gt; arrange(q_value, desc(morans_I)) |&gt; filter(status == &quot;OK&quot;) |&gt; head()
 
@@ -2357,11 +2345,12 @@ Bc_all_seurat$pseudotime &lt;- pseudotime(Bc_monocle)
 # pdf(&quot;11.4.1_Bc_FP_pseudotime.pdf&quot;, width = 4, height = 3)
 FeaturePlot(Bc_all_seurat, features = &quot;pseudotime&quot;)
 # dev.off()</code></pre>
-              </div>
-              <div id="gene-expression-along-pseudotime" class="section level4">
-                <h4>11.4.2 Gene Expression Along Pseudotime</h4>
-                <p>Plot expression trends for specific genes of interest along the pseudotime.</p>
-                <pre class="r"><code>#one can do multiple expression plots with certain identified genes
+</div>
+<div id="gene-expression-along-pseudotime" class="section level4">
+<h4>11.4.2 Gene Expression Along Pseudotime</h4>
+<p>Plot expression trends for specific genes of interest along the
+pseudotime.</p>
+<pre class="r"><code>#one can do multiple expression plots with certain identified genes
 # pdf(&quot;11.4.2_Bc_pseudotime_RP_genes_of_ineterest.pdf&quot;, width = 8, height = 9)
 RidgePlot(Bc_all_seurat, features = c(&quot;CD19&quot;, &quot;CD79A&quot;, &quot;CD79B&quot;, &quot;IGHG1&quot;, &quot;IGHG2&quot;, &quot;IGHA1&quot;, &quot;IGHA2&quot;, &quot;IGHM&quot;, &quot;IGHD&quot;, &quot;CD179A&quot;, &quot;SDC1&quot;, &quot;CD38&quot;, &quot;MZB1&quot;, &quot;VPREB3&quot;, &quot;MS4A1&quot;), sort = F, cols = cluster_colors)
 # dev.off()
@@ -2378,11 +2367,12 @@ plot_genes_in_pseudotime(Bc_monocle_subset, color_cells_by = &quot;monocle3_pseu
 # pdf(&quot;11.4.2_Bc_genes_of_ineterest_traj_annotated.pdf&quot;, width = 5, height = 10)
 plot_genes_in_pseudotime(Bc_monocle_subset, color_cells_by = &quot;annotated&quot; )
 # dev.off()</code></pre>
-              </div>
-              <div id="top-changing-genes-in-pseudotime" class="section level4">
-                <h4>11.4.3 Top Changing Genes in Pseudotime</h4>
-                <p>Visualize the top 5 genes with the most significant changes along pseudotime for each cluster.</p>
-                <pre class="r"><code>#plot top5 genes that change over pseudotime in each cluster
+</div>
+<div id="top-changing-genes-in-pseudotime" class="section level4">
+<h4>11.4.3 Top Changing Genes in Pseudotime</h4>
+<p>Visualize the top 5 genes with the most significant changes along
+pseudotime for each cluster.</p>
+<pre class="r"><code>#plot top5 genes that change over pseudotime in each cluster
 deg_sig &lt;- deg %&gt;% filter(q_value &lt; 0.05, status == &quot;OK&quot;)
 
 deg_sig$cluster &lt;- Bc_monocle$annotated[ match(deg_sig$gene_short_name,
@@ -2404,11 +2394,12 @@ plot_genes_in_pseudotime(
 )
 
 # dev.off()</code></pre>
-              </div>
-              <div id="condition-dependent-gene-expression" class="section level4">
-                <h4>11.4.4 Condition-Dependent Gene Expression</h4>
-                <p>Identify genes whose expression changes along pseudotime differ between conditions.</p>
-                <pre class="r"><code>#find genes that vary across condition
+</div>
+<div id="condition-dependent-gene-expression" class="section level4">
+<h4>11.4.4 Condition-Dependent Gene Expression</h4>
+<p>Identify genes whose expression changes along pseudotime differ
+between conditions.</p>
+<pre class="r"><code>#find genes that vary across condition
 gene_fits &lt;- fit_models(Bc_monocle, model_formula_str = &quot;~condition&quot;)
 gene_fits_tbl &lt;- coefficient_table(gene_fits)
 write.xlsx(gene_fits_tbl, &quot;11.4.4_Bcs_pseudotime_condition.xlsx&quot;)
@@ -2483,17 +2474,18 @@ p &lt;- plot_genes_in_pseudotime(
 )
 
 print(last_plot()) # ggsave(file.path(result_dir, &quot;11.4.4_Bc_pseudotime_along_traj_Plot_DE_MS_vs_ctrl.pdf&quot;), p , width = 5, height = 25)</code></pre>
-              </div>
-            </div>
-          </div>
-          <div id="score-analysis" class="section level2">
-            <h2>12. Score Analysis</h2>
-            <p>Calculate and analyze Fibrosis and IFN scores across conditions.</p>
-          </div>
-          <div id="fibrosis-score" class="section level2">
-            <h2>12.1 Fibrosis Score</h2>
-            <p>Compute fibrosis scores based on a gene set and compare between MS and Control.</p>
-            <pre class="r"><code>DefaultAssay(samples_seurat) &lt;- &quot;SCT&quot;
+</div>
+</div>
+</div>
+<div id="score-analysis" class="section level2">
+<h2>12. Score Analysis</h2>
+<p>Calculate and analyze Fibrosis and IFN scores across conditions.</p>
+</div>
+<div id="fibrosis-score" class="section level2">
+<h2>12.1 Fibrosis Score</h2>
+<p>Compute fibrosis scores based on a gene set and compare between MS
+and Control.</p>
+<pre class="r"><code>DefaultAssay(samples_seurat) &lt;- &quot;SCT&quot;
 fibrosis &lt;- read_csv(&quot;fibrosis.txt&quot;, col_names = FALSE) #genes from GO:0030198 = ECM related and upregulated in strucFibro reclustered
 fibrosis_score &lt;- AddModuleScore(samples_seurat, features = fibrosis, name = &quot;fibrosisScore&quot;)
 FeaturePlot(fibrosis_score, features =&quot;fibrosisScore1&quot;, split.by = &quot;condition&quot;)
@@ -2518,11 +2510,12 @@ ggplot(df_collapsed, aes(x = condition, y = fibrosisScore1, fill = condition)) +
   theme_classic() +
   labs(title = &quot;fibrosis score all cluster MzH_human_dura&quot;, x = &quot;Condition&quot;, y = &quot;average fibrosis score per sample&quot;)
 # dev.off()</code></pre>
-          </div>
-          <div id="ifn-score" class="section level2">
-            <h2>12.2 IFN Score</h2>
-            <p>Compute Interferon (IFN) scores and compare between MS and Control.</p>
-            <pre class="r"><code>#extract IF genes
+</div>
+<div id="ifn-score" class="section level2">
+<h2>12.2 IFN Score</h2>
+<p>Compute Interferon (IFN) scores and compare between MS and
+Control.</p>
+<pre class="r"><code>#extract IF genes
 all_genes &lt;- rownames(samples_seurat)
 IFN_genes &lt;- grep(&quot;^(IFI)&quot;, all_genes, value = TRUE, ignore.case = TRUE) #interferone induced
 
@@ -2545,11 +2538,11 @@ p &lt;- ggplot(df_collapsed, aes(x = condition, y = IFNScore1, fill = condition)
   theme_classic() +
   labs(title = &quot;IFN-induced score all cluster MzH_human_dura&quot;, x = &quot;Condition&quot;, y = &quot;average IFN score per sample&quot;)
 print(last_plot()) # ggsave(file.path(result_dir, &quot;12.2_MzH_human_dura_IFN-induced_score_MS_vs_Ctrl_all_cluster.pdf&quot;), p, width = 4, height = 6)</code></pre>
-          </div>
-          <div id="score-correlation" class="section level2">
-            <h2>12.3 Score Correlation</h2>
-            <p>Analyze the correlation between Fibrosis and IFN scores.</p>
-            <pre class="r"><code>fibrosis &lt;- read_csv(&quot;fibrosis.txt&quot;, col_names = FALSE) #genes from DE strucFibro fibrosis related
+</div>
+<div id="score-correlation" class="section level2">
+<h2>12.3 Score Correlation</h2>
+<p>Analyze the correlation between Fibrosis and IFN scores.</p>
+<pre class="r"><code>fibrosis &lt;- read_csv(&quot;fibrosis.txt&quot;, col_names = FALSE) #genes from DE strucFibro fibrosis related
 fibrosis_score &lt;- AddModuleScore(samples_seurat, features = fibrosis, name = &quot;fibrosisScore&quot;)
 df_fibrosis &lt;- FetchData(fibrosis_score, vars = c(&quot;fibrosisScore1&quot;, &quot;condition&quot;, &quot;annotated&quot;, &quot;sample_id&quot;))
 df_avg_fibrosis &lt;- df_fibrosis %&gt;%
@@ -2595,11 +2588,12 @@ p &lt;- ggplot(df_patient, aes(x = IFN_avg, y = fibrosis_avg, color = condition)
   theme(plot.title = element_text(face = &quot;bold&quot;, size = 13))
 
 print(last_plot()) # ggsave(&quot;12.3_Fibrosis_vs_IFN_per_patient_corelation_all_cluster.pdf&quot;, p, width = 8, height = 6)</code></pre>
-          </div>
-          <div id="score-density-pca" class="section level2">
-            <h2>12.4 Score Density PCA</h2>
-            <p>Visualize the distribution of Fibrosis and IFN scores using PCA density plots.</p>
-            <pre class="r"><code>#use df_patient from step 12.3
+</div>
+<div id="score-density-pca" class="section level2">
+<h2>12.4 Score Density PCA</h2>
+<p>Visualize the distribution of Fibrosis and IFN scores using PCA
+density plots.</p>
+<pre class="r"><code>#use df_patient from step 12.3
 df_pca &lt;- df_patient %&gt;%
   ungroup() %&gt;%
   dplyr::select(fibrosis_avg, IFN_avg)
@@ -2628,10 +2622,10 @@ library(ggExtra)
 
 p_marginal &lt;- ggMarginal(p, type = &quot;density&quot;, groupColour = TRUE, groupFill = TRUE)
 print(last_plot()) # ggsave(&quot;12.4_Fibrosis_vs_IFN_per_patient_density_PCA.pdf&quot;, p_marginal, width = 6, height = 6)</code></pre>
-          </div>
-          <div id="fibrosis-score-in-fibrotic-tissue" class="section level2">
-            <h2>12.5 fibrosis score in fibrotic tissue</h2>
-            <pre class="r"><code>skin &lt;- skin_fibros_Deng #load fibrotic skin dataset Deng
+</div>
+<div id="fibrosis-score-in-fibrotic-tissue" class="section level2">
+<h2>12.5 fibrosis score in fibrotic tissue</h2>
+<pre class="r"><code>skin &lt;- skin_fibros_Deng #load fibrotic skin dataset Deng
 rm(anchors, p1, p2, predictions, samples_combined, skin_fibros_Deng)
 
 fibrosis &lt;- read_csv(&quot;fibrosis.txt&quot;, col_names = FALSE) #genes from GO:0030198 = ECM related and upregulated in strucFibro reclustered
@@ -2655,31 +2649,36 @@ ggplot(df_collapsed, aes(x = condition, y = fibrosisScore1, fill = condition)) +
   theme_classic() +
   labs(title = &quot;fibrosis score in fibrotic skin&quot;, x = &quot;Condition&quot;, y = &quot;average fibrosis score per sample&quot;)
 # dev.off()</code></pre>
-          </div>
-          <div id="milo-differential-abundance-analysis" class="section level2">
-            <h2>13. Milo Differential Abundance Analysis</h2>
-            <p>Perform differential abundance analysis using Milo to identify neighborhoods with significant changes in cell counts between conditions.</p>
-            <pre class="r"><code>#https://marionilab.github.io/miloR/articles/milo_demo.html
+</div>
+<div id="milo-differential-abundance-analysis" class="section level2">
+<h2>13. Milo Differential Abundance Analysis</h2>
+<p>Perform differential abundance analysis using Milo to identify
+neighborhoods with significant changes in cell counts between
+conditions.</p>
+<pre class="r"><code>#https://marionilab.github.io/miloR/articles/milo_demo.html
 # Key concepts:
 # 1. Neighborhoods: Groups of similar cells defined by k-nearest neighbors in reduced dimension space
 # 2. Differential Abundance (DA): Statistical testing to find neighborhoods with significantly
 #    different cell counts between conditions (e.g., treatment vs control)
 # 3. Spatial FDR: Multiple testing correction that considers the overlap structure of neighborhoods</code></pre>
-            <div id="pre-processing" class="section level3">
-              <h3>13.1 Pre-processing</h3>
-              <p>Prepare the Seurat object for Milo analysis by converting it to a SingleCellExperiment object and adding dimensionality reduction data.</p>
-              <pre class="r"><code># need lognormalized data
+<div id="pre-processing" class="section level3">
+<h3>13.1 Pre-processing</h3>
+<p>Prepare the Seurat object for Milo analysis by converting it to a
+SingleCellExperiment object and adding dimensionality reduction
+data.</p>
+<pre class="r"><code># need lognormalized data
 samples_seurat_log &lt;- NormalizeData(samples_seurat, assay = &quot;RNA&quot;, normalization.method = &quot;LogNormalize&quot;)
 # Convert Seurat object to SingleCellExperiment (SCE) object required by Milo
 sce &lt;- as.SingleCellExperiment(samples_seurat_log)
 # add PCA and UMAP data
 reducedDim(sce, &quot;PCA&quot;) &lt;- samples_seurat@reductions$pca@cell.embeddings
 reducedDim(sce, &quot;UMAP&quot;) &lt;- samples_seurat@reductions$umap@cell.embeddings</code></pre>
-            </div>
-            <div id="create-milo-object" class="section level3">
-              <h3>13.2 Create Milo Object</h3>
-              <p>Initialize the Milo object and add relevant metadata (sample, condition, etc.).</p>
-              <pre class="r"><code>milo &lt;- Milo(sce)
+</div>
+<div id="create-milo-object" class="section level3">
+<h3>13.2 Create Milo Object</h3>
+<p>Initialize the Milo object and add relevant metadata (sample,
+condition, etc.).</p>
+<pre class="r"><code>milo &lt;- Milo(sce)
 # Add sample information (donor_id) to Milo object
 milo@colData$sample &lt;- samples_seurat@meta.data$sample
 milo@colData$condition &lt;- samples_seurat@meta.data$condition
@@ -2689,20 +2688,20 @@ milo@colData$cohort &lt;- samples_seurat@meta.data$cohort
 milo@colData$pool &lt;- samples_seurat@meta.data$pool
 milo@colData$biobank &lt;- samples_seurat@meta.data$biobank
 milo@colData$annotated &lt;- samples_seurat@meta.data$annotated</code></pre>
-            </div>
-            <div id="estimate-neighborhood-size-k" class="section level3">
-              <h3>13.3 Estimate Neighborhood Size (K)</h3>
-              <p>Estimate the optimal k parameter for neighborhood definition.</p>
-              <pre class="r"><code>ks_to_test &lt;- c(20, 30, 40, 50, 80, 100)
+</div>
+<div id="estimate-neighborhood-size-k" class="section level3">
+<h3>13.3 Estimate Neighborhood Size (K)</h3>
+<p>Estimate the optimal k parameter for neighborhood definition.</p>
+<pre class="r"><code>ks_to_test &lt;- c(20, 30, 40, 50, 80, 100)
 
 nhood_size_estimates &lt;- estimate_neighbourhood_sizes(milo, k_grid = ks_to_test, order = 2, prop = 0.1, filtering = TRUE, reducedDim_name = &quot;UMAP&quot;, plot_stat = T)
 
 best_k &lt;- 80</code></pre>
-            </div>
-            <div id="assign-neighborhoods" class="section level3">
-              <h3>13.4 Assign Neighborhoods</h3>
-              <p>Assign cells to neighborhoods based on the optimal k.</p>
-              <pre class="r"><code>set.seed(42)
+</div>
+<div id="assign-neighborhoods" class="section level3">
+<h3>13.4 Assign Neighborhoods</h3>
+<p>Assign cells to neighborhoods based on the optimal k.</p>
+<pre class="r"><code>set.seed(42)
 milo_k &lt;- assign_neighbourhoods(milo, k = best_k, order = 2, filtering = TRUE, reducedDim_name = &quot;UMAP&quot;, verbose = F)
 
 nhoods_milo &lt;- nhoods(milo_k)
@@ -2715,11 +2714,11 @@ p &lt;- plot_milo_by_single_metric(milo_k, nhood_stat_ct, colour_by = &quot;anno
 
 print(last_plot()) # ggsave(file.path(result_dir, &quot;13.4_neighborhoods_k80_cluster.pdf&quot;), p, width = 8, heigh = 5)
 qsave(milo_k, file.path(result_dir, &quot;13.4_neighborhoods_k80.qs&quot;))</code></pre>
-            </div>
-            <div id="milo-differential-expression-milode" class="section level3">
-              <h3>13.5 Milo Differential Expression (miloDE)</h3>
-              <p>Calculate differential expression per neighborhood.</p>
-              <pre class="r"><code>#time-expensive --&gt; use parallization
+</div>
+<div id="milo-differential-expression-milode" class="section level3">
+<h3>13.5 Milo Differential Expression (miloDE)</h3>
+<p>Calculate differential expression per neighborhood.</p>
+<pre class="r"><code>#time-expensive --&gt; use parallization
 library(BiocParallel)
 ncores = 16
 mcparam &lt;- SnowParam(workers = ncores, type = &quot;SOCK&quot;)
@@ -2747,11 +2746,12 @@ de_stat = de_test_neighbourhoods(milo_k,
                                  verbose = T)
 qsave(de_stat, file.path(result_dir, &quot;13.5_milo_de.qs&quot;))
 milo_DE &lt;- qread(&quot;13.5_milo_de.qs&quot;)</code></pre>
-            </div>
-            <div id="milo-de-genes-analysis" class="section level3">
-              <h3>13.6 Milo DE Genes Analysis</h3>
-              <p>Analyze DE genes within neighborhoods, including specific DE genes.</p>
-              <pre class="r"><code>### Get neighbourhood ranking by the extent of DE ###
+</div>
+<div id="milo-de-genes-analysis" class="section level3">
+<h3>13.6 Milo DE Genes Analysis</h3>
+<p>Analyze DE genes within neighborhoods, including specific DE
+genes.</p>
+<pre class="r"><code>### Get neighbourhood ranking by the extent of DE ###
 # transcriptional regions of noteworthy signs of DE
 stat_de_magnitude &lt;- rank_neighbourhoods_by_DE_magnitude(milo_DE)
 write.xlsx(stat_de_magnitude, file = file.path(result_dir, &quot;13.6_milo_DE_counts.xlsx&quot;), rowNames = FALSE)
@@ -2888,11 +2888,12 @@ for(nhood in neighborhoods2){
 saveWorkbook(wb2, file = &quot;13.6_milo_DE_specific_filtered_corrected_across_nhoods.xlsx&quot;, overwrite = TRUE)
 
 rm(wb, wb2, df_subset, neighborhoods, neighborhoods2, nhood)</code></pre>
-            </div>
-            <div id="upregulated-genes-in-ms" class="section level3">
-              <h3>13.7 Upregulated Genes in MS</h3>
-              <p>Identify and visualize genes upregulated in MS across neighborhoods.</p>
-              <pre class="r"><code>## DE_corrected_across_genes
+</div>
+<div id="upregulated-genes-in-ms" class="section level3">
+<h3>13.7 Upregulated Genes in MS</h3>
+<p>Identify and visualize genes upregulated in MS across
+neighborhoods.</p>
+<pre class="r"><code>## DE_corrected_across_genes
 de_genes_df_upregulated &lt;- de_genes_df %&gt;%
   filter(logFC &gt; 0) %&gt;%
   dplyr::select(gene, neighborhood, logFC, pval, pval_corrected_across_genes)
@@ -2942,11 +2943,12 @@ p &lt;- plot_milo_by_single_metric(milo_k, n_specific_upregulated_per_nhood, col
                                 layout = &quot;UMAP&quot; , size_range = c(1.5,3) , edge_width = c(0.2,0.5)) +
   scale_fill_viridis(name = &quot;# specific DE genes&quot;, limits = c(0, 400))
 print(last_plot()) # ggsave(file.path(result_dir, &quot;13.7_miloDE_upregulated_MS_corrected_across_nhoods_max400.pdf&quot;), p, width = 5, heigh = 5)</code></pre>
-            </div>
-            <div id="downregulated-genes-in-ms" class="section level3">
-              <h3>13.8 Downregulated Genes in MS</h3>
-              <p>Identify and visualize genes downregulated in MS across neighborhoods.</p>
-              <pre class="r"><code>## DE_corrected_across_genes
+</div>
+<div id="downregulated-genes-in-ms" class="section level3">
+<h3>13.8 Downregulated Genes in MS</h3>
+<p>Identify and visualize genes downregulated in MS across
+neighborhoods.</p>
+<pre class="r"><code>## DE_corrected_across_genes
 de_genes_df_downregulated &lt;- de_genes_df %&gt;%
   filter(logFC &lt; 0) %&gt;%
   dplyr::select(gene, neighborhood, logFC, pval, pval_corrected_across_genes)
@@ -2996,11 +2998,12 @@ p &lt;- plot_milo_by_single_metric(milo_k, n_specific_downregulated_per_nhood, c
                                 layout = &quot;UMAP&quot; , size_range = c(1.5,3) , edge_width = c(0.2,0.5)) +
   scale_fill_viridis(name = &quot;# specific DE genes&quot;, limits = c(0, 300))
 print(last_plot()) # ggsave(file.path(result_dir, &quot;13.8_miloDE_downregulated_MS_corrected_across_nhoods_max300.pdf&quot;), p, width = 5, heigh = 5)</code></pre>
-            </div>
-            <div id="differential-abundance-testing" class="section level3">
-              <h3>13.9 Differential Abundance Testing</h3>
-              <p>Perform the final differential abundance testing on the neighborhoods using the Negative Binomial GLM.</p>
-              <pre class="r"><code>milo_k &lt;- qread(&quot;13.4_neighborhoods_k80.qs&quot;)
+</div>
+<div id="differential-abundance-testing" class="section level3">
+<h3>13.9 Differential Abundance Testing</h3>
+<p>Perform the final differential abundance testing on the neighborhoods
+using the Negative Binomial GLM.</p>
+<pre class="r"><code>milo_k &lt;- qread(&quot;13.4_neighborhoods_k80.qs&quot;)
 #calculate neighbourhood counts
 milo_k &lt;- buildNhoodGraph(milo_k)
 colData(milo_k)$sample_condi &lt;- paste(colData(milo_k)$sample, colData(milo_k)$condition, sep=&quot;_&quot;)
@@ -3025,15 +3028,17 @@ print(last_plot()) # ggsave(file.path(result_dir, &quot;13.9_milo_DA_FDR_0.05_si
 
 p &lt;- plotNhoodGraphDA(milo_k, milo_DA, alpha = 1)
 print(last_plot()) # ggsave(file.path(result_dir, &quot;13.9_milo_DA_FDR_1_all.pdf&quot;), p, width = 5, heigh = 5)</code></pre>
-            </div>
-          </div>
-          <div id="myeloid-subset-analysis" class="section level2">
-            <h2>14. Myeloid Subset Analysis</h2>
-            <p>Recluster and analyze myeloid cells to identify subpopulations and their differential expression.</p>
-            <div id="myeloid-subset-and-reclustering" class="section level3">
-              <h3>14.0 Myeloid Subset and Reclustering</h3>
-              <p>Subset myeloid clusters, remove fibroblast contamination, and re-integrate data.</p>
-              <pre class="r"><code>##### subset myeloid Cluster &amp; SCT transform #####
+</div>
+</div>
+<div id="myeloid-subset-analysis" class="section level2">
+<h2>14. Myeloid Subset Analysis</h2>
+<p>Recluster and analyze myeloid cells to identify subpopulations and
+their differential expression.</p>
+<div id="myeloid-subset-and-reclustering" class="section level3">
+<h3>14.0 Myeloid Subset and Reclustering</h3>
+<p>Subset myeloid clusters, remove fibroblast contamination, and
+re-integrate data.</p>
+<pre class="r"><code>##### subset myeloid Cluster &amp; SCT transform #####
 myeloid_subset &lt;- subset(samples_seurat, idents = c(&quot;CAM&quot;, &quot;IFN-CAM&quot;, &quot;Myeloid1&quot;, &quot;Myeloid2&quot;, &quot;Myeloid3&quot;, &quot;Myeloid4&quot;, &quot;Myeloid5&quot;, &quot;Mast&quot;))
 myeloid_subset@assays$integrated &lt;- NULL
 myeloid_subset@assays$SCT &lt;- NULL
@@ -3091,11 +3096,11 @@ myeloid_main_seurat &lt;- subset(myeloid_seurat, idents = clusters_complete)
 
 Idents(myeloid_main_seurat) &lt;- &quot;seurat_clusters&quot;
 myeloid_main_seurat &lt;- subset(myeloid_main_seurat, idents = c(&quot;0&quot;, &quot;1&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;)) #remove Fibro contamination</code></pre>
-            </div>
-            <div id="myeloid-marker-genes" class="section level3">
-              <h3>14.1 Myeloid Marker Genes</h3>
-              <p>Identify marker genes for myeloid subpopulations.</p>
-              <pre class="r"><code>Idents(myeloid_main_seurat) &lt;- &quot;seurat_clusters&quot;
+</div>
+<div id="myeloid-marker-genes" class="section level3">
+<h3>14.1 Myeloid Marker Genes</h3>
+<p>Identify marker genes for myeloid subpopulations.</p>
+<pre class="r"><code>Idents(myeloid_main_seurat) &lt;- &quot;seurat_clusters&quot;
 DefaultAssay(myeloid_main_seurat) &lt;- &quot;SCT&quot;
 
 myeloid_main_seurat &lt;- PrepSCTFindMarkers(myeloid_main_seurat, assay = &quot;SCT&quot;)
@@ -3107,11 +3112,11 @@ marker_list &lt;- split(markers_sorted, markers_sorted$cluster)
 write.xlsx(marker_list, file = &quot;14.1_myeloid_Cluster_Markers.xlsx&quot;)
 
 rm(marker_list, markers, markers_sorted)</code></pre>
-            </div>
-            <div id="plot-myeloid-marker-genes" class="section level3">
-              <h3>14.1.1 Plot Myeloid Marker Genes</h3>
-              <p>Visualize top marker genes for myeloid subsets.</p>
-              <pre class="r"><code>Idents(myeloid_main_seurat) &lt;- &quot;seurat_clusters&quot;
+</div>
+<div id="plot-myeloid-marker-genes" class="section level3">
+<h3>14.1.1 Plot Myeloid Marker Genes</h3>
+<p>Visualize top marker genes for myeloid subsets.</p>
+<pre class="r"><code>Idents(myeloid_main_seurat) &lt;- &quot;seurat_clusters&quot;
 DefaultAssay(myeloid_main_seurat) &lt;- &quot;SCT&quot;
 genes&lt;- read_csv(&quot;marker_genes_myeloid_top5.txt&quot;, col_names = FALSE)
 # pdf(&quot;14.1.1_DotPlot_marker_genes_myeloid_top5.pdf&quot;, width = 12, heigh = 6)
@@ -3146,11 +3151,11 @@ dp$data &lt;- subset(dp$data, pct.exp &gt;10)
 # pdf(&quot;14.1.1_DotPlot_marker_genes_myeloid_top5_perc10.pdf&quot;, width = 8, heigh = 3)
 dp + scale_color_viridis_c() + RotatedAxis()
 # dev.off()</code></pre>
-            </div>
-            <div id="myeloid-de-analysis" class="section level3">
-              <h3>14.3 Myeloid DE Analysis</h3>
-              <p>Perform differential expression analysis for myeloid clusters.</p>
-              <pre class="r"><code>DefaultAssay(myeloid_main_seurat) &lt;- &quot;SCT&quot;
+</div>
+<div id="myeloid-de-analysis" class="section level3">
+<h3>14.3 Myeloid DE Analysis</h3>
+<p>Perform differential expression analysis for myeloid clusters.</p>
+<pre class="r"><code>DefaultAssay(myeloid_main_seurat) &lt;- &quot;SCT&quot;
 Idents(myeloid_main_seurat) &lt;- &quot;seurat_clusters&quot;
 myeloid_main_seurat$annotated &lt;- factor(myeloid_main_seurat$seurat_clusters)
 Idents(myeloid_main_seurat) &lt;- &quot;annotated&quot;
@@ -3223,11 +3228,11 @@ for (comp_name in names(de_nested_list)) {
   write.xlsx(de_nested_list[[comp_name]], file = file_name)
   message(&quot;Saved: &quot;, file_name)
 }</code></pre>
-            </div>
-            <div id="volcano-plots-for-myeloid-de" class="section level3">
-              <h3>14.3.1 Volcano Plots for Myeloid DE</h3>
-              <p>Visualize DE genes using volcano plots.</p>
-              <pre class="r"><code>de_file &lt;- &quot;14.3_DE_SCT_myeloid_MS_vs_Ctrl.xlsx&quot;
+</div>
+<div id="volcano-plots-for-myeloid-de" class="section level3">
+<h3>14.3.1 Volcano Plots for Myeloid DE</h3>
+<p>Visualize DE genes using volcano plots.</p>
+<pre class="r"><code>de_file &lt;- &quot;14.3_DE_SCT_myeloid_MS_vs_Ctrl.xlsx&quot;
 
 all_clusters &lt;- getSheetNames(de_file)
 
@@ -3301,11 +3306,11 @@ for (cluster in all_clusters) {
 }
 
 rm(de_data, p, sig_genes, volcano_genes, all_clusters, cluster, de_file, n_down, n_up, out_file, sig, top_genes)</code></pre>
-            </div>
-            <div id="go-enrichment-analysis" class="section level3">
-              <h3>14.3.2 GO Enrichment Analysis</h3>
-              <p>Perform Gene Ontology enrichment analysis on DE genes.</p>
-              <pre class="r"><code>set.seed(42)
+</div>
+<div id="go-enrichment-analysis" class="section level3">
+<h3>14.3.2 GO Enrichment Analysis</h3>
+<p>Perform Gene Ontology enrichment analysis on DE genes.</p>
+<pre class="r"><code>set.seed(42)
 read_all_sheets &lt;- function(path) {
   sheet_names &lt;- excel_sheets(path)
   sheets &lt;- lapply(sheet_names, function(s) read_excel(path, sheet = s))
@@ -3394,14 +3399,15 @@ for (comparison in names(all_de_lists)) {
     run_enrichment_and_plotting(de_df, gene_list_down, &quot;Down&quot;, cluster, comparison)
   }
 }</code></pre>
-            </div>
-            <div id="myeloid-trajectory-analysis-all-clusters" class="section level3">
-              <h3>14.4 Myeloid Trajectory Analysis (All Clusters)</h3>
-              <p>Analyze the developmental trajectory of all myeloid clusters.</p>
-              <div id="pseudotime-calculation-1" class="section level4">
-                <h4>14.4.0 Pseudotime Calculation</h4>
-                <p>Convert Seurat object to Monocle3 and calculate pseudotime.</p>
-                <pre class="r"><code>#convert Seurat object into Monocle object
+</div>
+<div id="myeloid-trajectory-analysis-all-clusters"
+class="section level3">
+<h3>14.4 Myeloid Trajectory Analysis (All Clusters)</h3>
+<p>Analyze the developmental trajectory of all myeloid clusters.</p>
+<div id="pseudotime-calculation-1" class="section level4">
+<h4>14.4.0 Pseudotime Calculation</h4>
+<p>Convert Seurat object to Monocle3 and calculate pseudotime.</p>
+<pre class="r"><code>#convert Seurat object into Monocle object
 #integrated and SCT (slot = &quot;scale.data&quot;) do not work as those are not saved as absolute values by Seurat but as differences from raw counts. So don&#39;t use scale.data
 #best is to use &quot;RNA&quot;, &quot;counts&quot;
 
@@ -3473,11 +3479,11 @@ ggplot(data.pseudo, aes(monocle3_pseudotime, reorder(annotated, monocle3_pseudot
 # dev.off()
 
 qsave(myeloid_monocle, &quot;14.4.0_myeloid_monocle.qs&quot;)</code></pre>
-              </div>
-              <div id="genes-along-pseudotime" class="section level4">
-                <h4>14.4.1 Genes Along Pseudotime</h4>
-                <p>Identify genes changing along the myeloid trajectory.</p>
-                <pre class="r"><code>#find genes that change in pseudotime
+</div>
+<div id="genes-along-pseudotime" class="section level4">
+<h4>14.4.1 Genes Along Pseudotime</h4>
+<p>Identify genes changing along the myeloid trajectory.</p>
+<pre class="r"><code>#find genes that change in pseudotime
 deg &lt;- graph_test(myeloid_monocle, neighbor_graph = &quot;principal_graph&quot;, verbose = TRUE)
 deg |&gt; arrange(q_value, desc(morans_I)) |&gt; filter(status == &quot;OK&quot;) |&gt; head()
 
@@ -3490,11 +3496,11 @@ myeloid_main_seurat$pseudotime &lt;- pseudotime(myeloid_monocle)
 # pdf(&quot;14.4.1_myeloid_FP_pseudotime.pdf&quot;, width = 4, height = 3)
 FeaturePlot(myeloid_main_seurat, features = &quot;pseudotime&quot;)
 # dev.off()</code></pre>
-              </div>
-              <div id="plot-genes-of-interest" class="section level4">
-                <h4>14.4.2 Plot Genes of Interest</h4>
-                <p>Visualize expression of specific genes along pseudotime.</p>
-                <pre class="r"><code>#one can do multiple expression plots with certain identified genes
+</div>
+<div id="plot-genes-of-interest" class="section level4">
+<h4>14.4.2 Plot Genes of Interest</h4>
+<p>Visualize expression of specific genes along pseudotime.</p>
+<pre class="r"><code>#one can do multiple expression plots with certain identified genes
 # pdf(&quot;14.4.2_myeloid_pseudotime_RP_genes_of_ineterest.pdf&quot;, width = 8, height = 9)
 RidgePlot(myeloid_main_seurat, features = c(&quot;CD209&quot;, &quot;LYVE1&quot;, &quot;MRC1&quot;, &quot;CD163&quot;, &quot;F13A1&quot;, &quot;VSIG4&quot;, &quot;SELENOP&quot;, &quot;C1QA&quot;, &quot;C1QB&quot;, &quot;IFIT2&quot;, &quot;IFI44L&quot; , &quot;IFI44&quot;, &quot;IFIH1&quot;), sort = F, cols = cluster_colors)
 # dev.off()
@@ -3511,11 +3517,12 @@ plot_genes_in_pseudotime(myeloid_monocle_subset, color_cells_by = &quot;monocle3
 # pdf(&quot;14.4.2_myeloid_genes_of_ineterest_traj_annotated.pdf&quot;, width = 5, height = 10)
 plot_genes_in_pseudotime(myeloid_monocle_subset, color_cells_by = &quot;annotated&quot; )
 # dev.off()</code></pre>
-              </div>
-              <div id="top-changing-genes-in-pseudotime-1" class="section level4">
-                <h4>14.4.3 Top Changing Genes in Pseudotime</h4>
-                <p>Visualize the top 5 most significant genes per cluster along pseudotime.</p>
-                <pre class="r"><code>#plot top5 genes that change over pseudotime in each cluster
+</div>
+<div id="top-changing-genes-in-pseudotime-1" class="section level4">
+<h4>14.4.3 Top Changing Genes in Pseudotime</h4>
+<p>Visualize the top 5 most significant genes per cluster along
+pseudotime.</p>
+<pre class="r"><code>#plot top5 genes that change over pseudotime in each cluster
 deg_sig &lt;- deg %&gt;% filter(q_value &lt; 0.05, status == &quot;OK&quot;)
 
 deg_sig$cluster &lt;- myeloid_monocle$annotated[ match(deg_sig$gene_short_name,
@@ -3537,15 +3544,18 @@ plot_genes_in_pseudotime(
 )
 
 # dev.off()</code></pre>
-              </div>
-            </div>
-            <div id="myeloid-trajectory-analysis-focused-subset" class="section level3">
-              <h3>14.5 Myeloid Trajectory Analysis (Focused Subset)</h3>
-              <p>Analyze trajectory for specific myeloid clusters (1, 0, 3) excluding granulocytes and mast cells.</p>
-              <div id="pseudotime-calculation-subset" class="section level4">
-                <h4>14.5.0 Pseudotime Calculation (Subset)</h4>
-                <p>Convert subset Seurat object to Monocle3 and calculate pseudotime.</p>
-                <pre class="r"><code>#convert Seurat object into Monocle object
+</div>
+</div>
+<div id="myeloid-trajectory-analysis-focused-subset"
+class="section level3">
+<h3>14.5 Myeloid Trajectory Analysis (Focused Subset)</h3>
+<p>Analyze trajectory for specific myeloid clusters (1, 0, 3) excluding
+granulocytes and mast cells.</p>
+<div id="pseudotime-calculation-subset" class="section level4">
+<h4>14.5.0 Pseudotime Calculation (Subset)</h4>
+<p>Convert subset Seurat object to Monocle3 and calculate
+pseudotime.</p>
+<pre class="r"><code>#convert Seurat object into Monocle object
 #integrated and SCT (slot = &quot;scale.data&quot;) do not work as those are not saved as absolute values by Seurat but as differences from raw counts. So don&#39;t use scale.data
 #best is to use &quot;RNA&quot;, &quot;counts&quot;
 
@@ -3620,11 +3630,11 @@ ggplot(data.pseudo, aes(monocle3_pseudotime, reorder(annotated, monocle3_pseudot
 # dev.off()
 
 qsave(myeloid_monocle, &quot;14.5.0_myeloid_monocle_focusMono.qs&quot;)</code></pre>
-              </div>
-              <div id="genes-along-pseudotime-subset" class="section level4">
-                <h4>14.5.1 Genes Along Pseudotime (Subset)</h4>
-                <p>Identify genes changing along the focused myeloid trajectory.</p>
-                <pre class="r"><code>#find genes that change in pseudotime
+</div>
+<div id="genes-along-pseudotime-subset" class="section level4">
+<h4>14.5.1 Genes Along Pseudotime (Subset)</h4>
+<p>Identify genes changing along the focused myeloid trajectory.</p>
+<pre class="r"><code>#find genes that change in pseudotime
 deg &lt;- graph_test(myeloid_monocle, neighbor_graph = &quot;principal_graph&quot;, verbose = TRUE)
 deg |&gt; arrange(q_value, desc(morans_I)) |&gt; filter(status == &quot;OK&quot;) |&gt; head()
 
@@ -3637,11 +3647,12 @@ myeloid_main_seurat$pseudotime &lt;- pseudotime(myeloid_monocle)
 # pdf(&quot;14.5.1_myeloid_FP_pseudotime.pdf&quot;, width = 4, height = 3)
 FeaturePlot(myeloid_main_seurat, features = &quot;pseudotime&quot;)
 # dev.off()</code></pre>
-              </div>
-              <div id="plot-genes-of-interest-subset" class="section level4">
-                <h4>14.5.2 Plot Genes of Interest (Subset)</h4>
-                <p>Visualize expression of specific genes along the focused pseudotime.</p>
-                <pre class="r"><code>#one can do multiple expression plots with certain identified genes
+</div>
+<div id="plot-genes-of-interest-subset" class="section level4">
+<h4>14.5.2 Plot Genes of Interest (Subset)</h4>
+<p>Visualize expression of specific genes along the focused
+pseudotime.</p>
+<pre class="r"><code>#one can do multiple expression plots with certain identified genes
 # pdf(&quot;14.5.2_myeloid_pseudotime_RP_genes_of_ineterest.pdf&quot;, width = 8, height = 9)
 RidgePlot(myeloid_main_seurat, features = c(&quot;CD209&quot;, &quot;LYVE1&quot;, &quot;MRC1&quot;, &quot;CD163&quot;, &quot;F13A1&quot;, &quot;VSIG4&quot;, &quot;SELENOP&quot;, &quot;C1QA&quot;, &quot;C1QB&quot;, &quot;IFIT2&quot;, &quot;IFI44L&quot; , &quot;IFI44&quot;, &quot;IFIH1&quot;), sort = F, cols = cluster_colors)
 # dev.off()
@@ -3658,11 +3669,12 @@ plot_genes_in_pseudotime(myeloid_monocle_subset, color_cells_by = &quot;monocle3
 # pdf(&quot;14.5.2_myeloid_genes_of_ineterest_traj_annotated.pdf&quot;, width = 5, height = 10)
 plot_genes_in_pseudotime(myeloid_monocle_subset, color_cells_by = &quot;annotated&quot; ) + scale_color_manual(values = cluster_colors)
 # dev.off()</code></pre>
-              </div>
-              <div id="top-changing-genes-subset" class="section level4">
-                <h4>14.5.3 Top Changing Genes (Subset)</h4>
-                <p>Visualize the top 5 most significant genes per cluster along the focused pseudotime.</p>
-                <pre class="r"><code>#plot top5 genes that change over pseudotime in each cluster
+</div>
+<div id="top-changing-genes-subset" class="section level4">
+<h4>14.5.3 Top Changing Genes (Subset)</h4>
+<p>Visualize the top 5 most significant genes per cluster along the
+focused pseudotime.</p>
+<pre class="r"><code>#plot top5 genes that change over pseudotime in each cluster
 deg_sig &lt;- deg %&gt;% filter(q_value &lt; 0.05, status == &quot;OK&quot;)
 
 deg_sig$cluster &lt;- myeloid_monocle$annotated[ match(deg_sig$gene_short_name,
@@ -3684,11 +3696,12 @@ plot_genes_in_pseudotime(
 ) + scale_color_manual(values = cluster_colors)
 
 # dev.off()</code></pre>
-              </div>
-              <div id="condition-dependent-expression" class="section level4">
-                <h4>14.4.4 Condition-Dependent Expression</h4>
-                <p>Identify genes whose expression changes along pseudotime differ between conditions.</p>
-                <pre class="r"><code>#find genes that vary across condition
+</div>
+<div id="condition-dependent-expression" class="section level4">
+<h4>14.4.4 Condition-Dependent Expression</h4>
+<p>Identify genes whose expression changes along pseudotime differ
+between conditions.</p>
+<pre class="r"><code>#find genes that vary across condition
 gene_fits &lt;- fit_models(myeloid_monocle, model_formula_str = &quot;~condition&quot;)
 gene_fits_tbl &lt;- coefficient_table(gene_fits)
 write.xlsx(gene_fits_tbl, &quot;14.5.4_myeloids_pseudotime_condition.xlsx&quot;)
@@ -3763,15 +3776,17 @@ p &lt;- plot_genes_in_pseudotime(
 )
 
 print(last_plot()) # ggsave(file.path(result_dir, &quot;14.5.4_myeloid_pseudotime_along_traj_Plot_DE_MS_vs_ctrl.pdf&quot;), p , width = 5, height = 25)</code></pre>
-              </div>
-            </div>
-            <div id="cluster-abundance-analysis-confounder-adjusted-1" class="section level3">
-              <h3>14.6 Cluster Abundance Analysis (Confounder Adjusted)</h3>
-              <p>Analyze changes in myeloid cluster abundance while adjusting for confounding variables.</p>
-              <div id="data-preparation-confounders" class="section level4">
-                <h4>14.6.1 Data Preparation (Confounders)</h4>
-                <p>Prepare metadata and count matrices for abundance analysis.</p>
-                <pre class="r"><code># Extract metadata and ensure all required variables are present
+</div>
+</div>
+<div id="cluster-abundance-analysis-confounder-adjusted-1"
+class="section level3">
+<h3>14.6 Cluster Abundance Analysis (Confounder Adjusted)</h3>
+<p>Analyze changes in myeloid cluster abundance while adjusting for
+confounding variables.</p>
+<div id="data-preparation-confounders" class="section level4">
+<h4>14.6.1 Data Preparation (Confounders)</h4>
+<p>Prepare metadata and count matrices for abundance analysis.</p>
+<pre class="r"><code># Extract metadata and ensure all required variables are present
 meta_confounders &lt;- myeloid_main_seurat@meta.data %&gt;%
   dplyr::select(sample_id, condition, cohort, pool, annotated, age, sex) %&gt;%
   # Remove rows with missing confounder data
@@ -3800,11 +3815,13 @@ rownames(sample_meta) &lt;- sample_meta$sample_id
 
 # Ensure same sample order
 sample_meta &lt;- sample_meta[rownames(count_matrix), ]</code></pre>
-              </div>
-              <div id="confounder-adjusted-differential-abundance-1" class="section level4">
-                <h4>14.6.2 Confounder-Adjusted Differential Abundance</h4>
-                <p>Run <code>propeller</code> analysis to identify differentially abundant myeloid cell types between MS and Ctrl.</p>
-                <pre class="r"><code>run_propeller_with_confounders &lt;- function(count_data, sample_data, group_var, confounders, comparisons, output_file) {
+</div>
+<div id="confounder-adjusted-differential-abundance-1"
+class="section level4">
+<h4>14.6.2 Confounder-Adjusted Differential Abundance</h4>
+<p>Run <code>propeller</code> analysis to identify differentially
+abundant myeloid cell types between MS and Ctrl.</p>
+<pre class="r"><code>run_propeller_with_confounders &lt;- function(count_data, sample_data, group_var, confounders, comparisons, output_file) {
 
   results_list &lt;- list()
 
@@ -3929,11 +3946,12 @@ results_confounders_pms &lt;- run_propeller_with_confounders(
   comparisons = comparisons,
   output_file = file.path(&quot;14.6.2_confounder_adjusted_propeller.pdf&quot;)
 )</code></pre>
-              </div>
-              <div id="confounder-adjusted-log2-fold-changes" class="section level4">
-                <h4>14.6.3 Confounder-Adjusted Log2 Fold Changes</h4>
-                <p>Calculate and visualize log2 fold changes for myeloid clusters, adjusting for confounders.</p>
-                <pre class="r"><code>run_propeller_with_confounders &lt;- function(count_data, sample_data, group_var, confounders, comparisons, output_file) {
+</div>
+<div id="confounder-adjusted-log2-fold-changes" class="section level4">
+<h4>14.6.3 Confounder-Adjusted Log2 Fold Changes</h4>
+<p>Calculate and visualize log2 fold changes for myeloid clusters,
+adjusting for confounders.</p>
+<pre class="r"><code>run_propeller_with_confounders &lt;- function(count_data, sample_data, group_var, confounders, comparisons, output_file) {
 
   results_list &lt;- list()
 
@@ -4054,16 +4072,18 @@ results_confounders_pms &lt;- run_propeller_with_confounders(
   comparisons = comparisons,
   output_file = file.path(&quot;14.6.3_confounder_adjusted_propeller_LogFC_all.pdf&quot;)
 )</code></pre>
-              </div>
-            </div>
-          </div>
-          <div id="fibroblast-subset-analysis" class="section level2">
-            <h2>15. Fibroblast Subset Analysis</h2>
-            <p>Recluster and analyze fibroblast cells to identify subpopulations and their differential expression.</p>
-            <div id="fibroblast-subset-and-reclustering" class="section level3">
-              <h3>15.0 Fibroblast Subset and Reclustering</h3>
-              <p>Subset fibroblast clusters, re-integrate data, and perform clustering.</p>
-              <pre class="r"><code>##### subset Fibro Cluster &amp; SCT transform #####
+</div>
+</div>
+</div>
+<div id="fibroblast-subset-analysis" class="section level2">
+<h2>15. Fibroblast Subset Analysis</h2>
+<p>Recluster and analyze fibroblast cells to identify subpopulations and
+their differential expression.</p>
+<div id="fibroblast-subset-and-reclustering" class="section level3">
+<h3>15.0 Fibroblast Subset and Reclustering</h3>
+<p>Subset fibroblast clusters, re-integrate data, and perform
+clustering.</p>
+<pre class="r"><code>##### subset Fibro Cluster &amp; SCT transform #####
 Idents(samples_seurat) &lt;- &quot;annotated&quot;
 Fibro_subset &lt;- subset(samples_seurat, idents = c(&quot;duraFibro1&quot;, &quot;duraFibro2&quot;, &quot;duraFibro3&quot;, &quot;duraFibro4&quot;, &quot;duraFibro5&quot;, &quot;duraFibro6&quot;, &quot;duraFibro7&quot;, &quot;duraFibro8&quot;, &quot;ABC&quot;, &quot;arach_bordFibro&quot;))
 Fibro_subset@assays$integrated &lt;- NULL
@@ -4125,11 +4145,11 @@ print(last_plot()) # ggsave(file.path(result_dir, &quot;15.0_DimPlot_Fibro_main_
 
 p &lt;- DimPlot(Fibro_main_seurat, label = T, split.by = &quot;sample_id&quot;)
 print(last_plot()) # ggsave(file.path(result_dir, &quot;15.0_DimPlot_Fibro_main_res0.15_removedClusters_by_patient.pdf&quot;), p, width = 30, height = 6)</code></pre>
-            </div>
-            <div id="fibroblast-marker-genes" class="section level3">
-              <h3>15.1 Fibroblast Marker Genes</h3>
-              <p>Identify marker genes for fibroblast subpopulations.</p>
-              <pre class="r"><code>Idents(Fibro_main_seurat) &lt;- &quot;seurat_clusters&quot;
+</div>
+<div id="fibroblast-marker-genes" class="section level3">
+<h3>15.1 Fibroblast Marker Genes</h3>
+<p>Identify marker genes for fibroblast subpopulations.</p>
+<pre class="r"><code>Idents(Fibro_main_seurat) &lt;- &quot;seurat_clusters&quot;
 Fibro_main_seurat &lt;- PrepSCTFindMarkers(Fibro_main_seurat)
 qsave(Fibro_main_seurat, file.path(result_dir, &quot;15.1_Fibro_main_seurat_res0.15_downstream_analysis.qs&quot;))
 markers &lt;- FindAllMarkers(Fibro_main_seurat, assay = &quot;SCT&quot;, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25)
@@ -4137,11 +4157,12 @@ markers_sorted &lt;- markers %&gt;%
   arrange(cluster, p_val_adj, desc(avg_log2FC))
 marker_list &lt;- split(markers_sorted, markers_sorted$cluster)
 write.xlsx(marker_list, file = &quot;15.1_Cluster_Markers_Fibro.xlsx&quot;)</code></pre>
-            </div>
-            <div id="go-enrichment-on-fibroblast-markers" class="section level3">
-              <h3>15.2 GO Enrichment on Fibroblast Markers</h3>
-              <p>Perform Gene Ontology enrichment analysis on the identified marker genes.</p>
-              <pre class="r"><code>set.seed(42)
+</div>
+<div id="go-enrichment-on-fibroblast-markers" class="section level3">
+<h3>15.2 GO Enrichment on Fibroblast Markers</h3>
+<p>Perform Gene Ontology enrichment analysis on the identified marker
+genes.</p>
+<pre class="r"><code>set.seed(42)
 # Function to read all sheets from an Excel file
 read_all_sheets &lt;- function(path) {
   sheet_names &lt;- excel_sheets(path)
@@ -4214,11 +4235,12 @@ for (cluster in names(marker_genes)) {
     results_enrichment[[cluster]] &lt;- ego
   }
 }</code></pre>
-            </div>
-            <div id="fibroblast-de-analysis" class="section level3">
-              <h3>15.3 Fibroblast DE Analysis</h3>
-              <p>Perform differential expression analysis for fibroblast clusters between conditions.</p>
-              <pre class="r"><code>DefaultAssay(Fibro_main_seurat) &lt;- &quot;SCT&quot;
+</div>
+<div id="fibroblast-de-analysis" class="section level3">
+<h3>15.3 Fibroblast DE Analysis</h3>
+<p>Perform differential expression analysis for fibroblast clusters
+between conditions.</p>
+<pre class="r"><code>DefaultAssay(Fibro_main_seurat) &lt;- &quot;SCT&quot;
 Idents(Fibro_main_seurat) &lt;- &quot;seurat_clusters&quot;
 Fibro_main_seurat$annotated &lt;- factor(Fibro_main_seurat$seurat_clusters)
 Idents(Fibro_main_seurat) &lt;- &quot;annotated&quot;
@@ -4291,11 +4313,11 @@ for (comp_name in names(de_nested_list)) {
   write.xlsx(de_nested_list[[comp_name]], file = file_name)
   message(&quot;Saved: &quot;, file_name)
 }</code></pre>
-            </div>
-            <div id="volcano-plots-for-fibroblast-de" class="section level3">
-              <h3>15.4 Volcano Plots for Fibroblast DE</h3>
-              <p>Visualize fibroblast DE genes using volcano plots.</p>
-              <pre class="r"><code>de_file &lt;- &quot;15.3_DE_SCT_Fibro_MS_vs_Ctrl.xlsx&quot;
+</div>
+<div id="volcano-plots-for-fibroblast-de" class="section level3">
+<h3>15.4 Volcano Plots for Fibroblast DE</h3>
+<p>Visualize fibroblast DE genes using volcano plots.</p>
+<pre class="r"><code>de_file &lt;- &quot;15.3_DE_SCT_Fibro_MS_vs_Ctrl.xlsx&quot;
 
 all_clusters &lt;- getSheetNames(de_file)
 
@@ -4369,11 +4391,12 @@ for (cluster in all_clusters) {
 }
 
 rm(de_data, p, sig_genes, volcano_genes, all_clusters, cluster, de_file, n_down, n_up, out_file, sig, top_genes)</code></pre>
-            </div>
-            <div id="go-enrichment-analysis-fibroblast-de" class="section level3">
-              <h3>15.5 GO Enrichment Analysis (Fibroblast DE)</h3>
-              <p>Perform GO enrichment analysis on differentially expressed genes in fibroblasts.</p>
-              <pre class="r"><code>set.seed(42)
+</div>
+<div id="go-enrichment-analysis-fibroblast-de" class="section level3">
+<h3>15.5 GO Enrichment Analysis (Fibroblast DE)</h3>
+<p>Perform GO enrichment analysis on differentially expressed genes in
+fibroblasts.</p>
+<pre class="r"><code>set.seed(42)
 read_all_sheets &lt;- function(path) {
   sheet_names &lt;- excel_sheets(path)
   sheets &lt;- lapply(sheet_names, function(s) read_excel(path, sheet = s))
@@ -4462,11 +4485,12 @@ for (comparison in names(all_de_lists)) {
     run_enrichment_and_plotting(de_df, gene_list_down, &quot;Down&quot;, cluster, comparison)
   }
 }</code></pre>
-            </div>
-            <div id="transfer-label" class="section level3">
-              <h3>15.6 Transfer Label</h3>
-              <p>Transfer annotations to the main fibroblast Seurat object and visualize.</p>
-              <pre class="r"><code>Fibro_main_seurat$annotated_1 &lt;- Fibro_subset$annotated
+</div>
+<div id="transfer-label" class="section level3">
+<h3>15.6 Transfer Label</h3>
+<p>Transfer annotations to the main fibroblast Seurat object and
+visualize.</p>
+<pre class="r"><code>Fibro_main_seurat$annotated_1 &lt;- Fibro_subset$annotated
 
 Idents(Fibro_main_seurat) &lt;- &quot;annotated_1&quot;
 p &lt;- DimPlot(Fibro_main_seurat, label = T)
@@ -4490,14 +4514,16 @@ cluster_colors = c(&quot;0&quot; = &quot;#66c69b&quot;, #main duraFibro2
 Idents(Fibro_main_seurat) &lt;- &quot;seurat_clusters&quot;
 p &lt;- DimPlot(Fibro_main_seurat, label = T, cols = cluster_colors)
 print(last_plot()) # ggsave(file.path(result_dir, &quot;15.6_DimPlot_Fibro_reclustered_res0.15_newcolor.pdf&quot;), p, width = 6, height = 6)</code></pre>
-            </div>
-            <div id="fibroblast-trajectory-analysis" class="section level3">
-              <h3>15.7 Fibroblast Trajectory Analysis</h3>
-              <p>Analyze the developmental trajectory of fibroblast cells using Monocle3.</p>
-              <div id="pseudotime-calculation-2" class="section level4">
-                <h4>15.7.0 Pseudotime Calculation</h4>
-                <p>Convert fibroblast Seurat object to Monocle3 and calculate pseudotime.</p>
-                <pre class="r"><code>Idents(Fibro_seurat) &lt;- &quot;seurat_clusters&quot;
+</div>
+<div id="fibroblast-trajectory-analysis" class="section level3">
+<h3>15.7 Fibroblast Trajectory Analysis</h3>
+<p>Analyze the developmental trajectory of fibroblast cells using
+Monocle3.</p>
+<div id="pseudotime-calculation-2" class="section level4">
+<h4>15.7.0 Pseudotime Calculation</h4>
+<p>Convert fibroblast Seurat object to Monocle3 and calculate
+pseudotime.</p>
+<pre class="r"><code>Idents(Fibro_seurat) &lt;- &quot;seurat_clusters&quot;
 Fibro_seurat$annotated_prev &lt;- Fibro_seurat$annotated
 Fibro_seurat$annotated &lt;- Fibro_seurat$seurat_clusters
 data &lt;- as(as.matrix(GetAssayData(Fibro_seurat, assay = &quot;SCT&quot;, slot = &quot;counts&quot;)), &#39;sparseMatrix&#39;) #normally on RNA
@@ -4585,11 +4611,11 @@ ggplot(data.pseudo, aes(monocle3_pseudotime, reorder(annotated, monocle3_pseudot
 # dev.off()
 
 qsave(Fibro_monocle, &quot;15.7.0_Fibro_monocle.qs&quot;)</code></pre>
-              </div>
-              <div id="genes-along-pseudotime-1" class="section level4">
-                <h4>15.7.1 Genes Along Pseudotime</h4>
-                <p>Identify genes changing along the fibroblast trajectory.</p>
-                <pre class="r"><code>#find genes that change in pseudotime
+</div>
+<div id="genes-along-pseudotime-1" class="section level4">
+<h4>15.7.1 Genes Along Pseudotime</h4>
+<p>Identify genes changing along the fibroblast trajectory.</p>
+<pre class="r"><code>#find genes that change in pseudotime
 deg &lt;- graph_test(Fibro_monocle, neighbor_graph = &quot;principal_graph&quot;, verbose = TRUE)
 deg |&gt; arrange(q_value, desc(morans_I)) |&gt; filter(status == &quot;OK&quot;) |&gt; head()
 
@@ -4602,11 +4628,12 @@ Fibro_seurat$pseudotime &lt;- pseudotime(Fibro_monocle)
 # pdf(&quot;15.7.1_Fibro_FP_pseudotime.pdf&quot;, width = 4, height = 3)
 FeaturePlot(Fibro_seurat, features = &quot;pseudotime&quot;)
 # dev.off()</code></pre>
-              </div>
-              <div id="plot-genes-of-interest-1" class="section level4">
-                <h4>15.7.2 Plot Genes of Interest</h4>
-                <p>Visualize expression of specific genes along the fibroblast pseudotime.</p>
-                <pre class="r"><code>#one can do multiple expression plots with certain identified genes
+</div>
+<div id="plot-genes-of-interest-1" class="section level4">
+<h4>15.7.2 Plot Genes of Interest</h4>
+<p>Visualize expression of specific genes along the fibroblast
+pseudotime.</p>
+<pre class="r"><code>#one can do multiple expression plots with certain identified genes
 # pdf(&quot;15.7.2_Fibro_pseudotime_RP_genes_of_ineterest.pdf&quot;, width = 8, height = 9)
 RidgePlot(Fibro_seurat, features = c(&quot;SVEP1&quot;, &quot;FGF7&quot;, &quot;LEPR&quot;, &quot;FBLN1&quot;, &quot;CLU&quot;, &quot;TAGLN&quot;, &quot;CFH&quot;, &quot;ANGPT1&quot;, &quot;NCAM1&quot;, &quot;AKAP12&quot;, &quot;SLC4A4&quot;, &quot;KCNMA1&quot;, &quot;F13A1&quot;, &quot;CTSB&quot;, &quot;PI16&quot;, &quot;MFAP5&quot;, &quot;KLF9&quot;, &quot;DHRS3&quot;, &quot;PHLDB2&quot;), sort = F, cols = cluster_colors)
 # dev.off()
@@ -4623,11 +4650,12 @@ plot_genes_in_pseudotime(Fibro_monocle, color_cells_by = &quot;monocle3_pseudoti
 # pdf(&quot;15.7.2_Fibro_genes_of_ineterest_traj_annotated.pdf&quot;, width = 5, height = 20)
 plot_genes_in_pseudotime(Fibro_monocle, color_cells_by = &quot;annotated&quot; )
 # dev.off()</code></pre>
-              </div>
-              <div id="top-changing-genes-in-pseudotime-2" class="section level4">
-                <h4>15.7.3 Top Changing Genes in Pseudotime</h4>
-                <p>Visualize the top 5 most significant genes per cluster along the fibroblast pseudotime.</p>
-                <pre class="r"><code>#plot top5 genes that change over pseudotime in each cluster
+</div>
+<div id="top-changing-genes-in-pseudotime-2" class="section level4">
+<h4>15.7.3 Top Changing Genes in Pseudotime</h4>
+<p>Visualize the top 5 most significant genes per cluster along the
+fibroblast pseudotime.</p>
+<pre class="r"><code>#plot top5 genes that change over pseudotime in each cluster
 deg_sig &lt;- deg %&gt;% filter(q_value &lt; 0.05, status == &quot;OK&quot;)
 
 deg_sig$cluster &lt;- Fibro_monocle$annotated[ match(deg_sig$gene_short_name,
@@ -4649,11 +4677,12 @@ plot_genes_in_pseudotime(
 )
 
 # dev.off()</code></pre>
-              </div>
-              <div id="condition-dependent-gene-expression-1" class="section level4">
-                <h4>15.7.4 Condition-Dependent Gene Expression</h4>
-                <p>Identify genes that vary across conditions along the pseudotime trajectory.</p>
-                <pre class="r"><code>#find genes that vary across condition
+</div>
+<div id="condition-dependent-gene-expression-1" class="section level4">
+<h4>15.7.4 Condition-Dependent Gene Expression</h4>
+<p>Identify genes that vary across conditions along the pseudotime
+trajectory.</p>
+<pre class="r"><code>#find genes that vary across condition
 gene_fits &lt;- fit_models(Fibro_monocle, model_formula_str = &quot;~condition&quot;)
 gene_fits_tbl &lt;- coefficient_table(gene_fits)
 write.xlsx(gene_fits_tbl, &quot;15.7.4_Fibros_pseudotime_condition.xlsx&quot;)
@@ -4728,12 +4757,14 @@ p &lt;- plot_genes_in_pseudotime(
 )
 
 print(last_plot()) # ggsave(file.path(result_dir, &quot;15.7.4_Fibro_pseudotime_along_traj_Plot_DE_MS_vs_ctrl.pdf&quot;), p , width = 5, height = 25)</code></pre>
-              </div>
-            </div>
-            <div id="overall-fibroblast-differential-expression" class="section level3">
-              <h3>15.8 Overall Fibroblast Differential Expression</h3>
-              <p>Perform differential expression analysis on the overall fibroblast population (duraFibro clusters) between MS and Ctrl conditions.</p>
-              <pre class="r"><code>Idents(Fibro_main_seurat) &lt;- &quot;seurat_clusters&quot;
+</div>
+</div>
+<div id="overall-fibroblast-differential-expression"
+class="section level3">
+<h3>15.8 Overall Fibroblast Differential Expression</h3>
+<p>Perform differential expression analysis on the overall fibroblast
+population (duraFibro clusters) between MS and Ctrl conditions.</p>
+<pre class="r"><code>Idents(Fibro_main_seurat) &lt;- &quot;seurat_clusters&quot;
 duraFibro_seurat &lt;- subset(Fibro_main_seurat, idents = c(&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;9&quot;))
 
 Idents(duraFibro_seurat) &lt;- &quot;condition&quot;
@@ -4752,11 +4783,13 @@ DE_duraFibro_overall &lt;- DE_duraFibro_overall %&gt;%
   arrange(p_val_adj, desc(avg_log2FC))
 
 write_xlsx(DE_duraFibro_overall, &quot;15.8_DE_duraFibro_overall.xlsx&quot;)</code></pre>
-            </div>
-            <div id="go-enrichment-for-overall-fibroblast-de" class="section level3">
-              <h3>15.8.1 GO Enrichment for Overall Fibroblast DE</h3>
-              <p>Perform Gene Ontology enrichment analysis on the differentially expressed genes found in the overall fibroblast analysis.</p>
-              <pre class="r"><code>set.seed(42)
+</div>
+<div id="go-enrichment-for-overall-fibroblast-de"
+class="section level3">
+<h3>15.8.1 GO Enrichment for Overall Fibroblast DE</h3>
+<p>Perform Gene Ontology enrichment analysis on the differentially
+expressed genes found in the overall fibroblast analysis.</p>
+<pre class="r"><code>set.seed(42)
 
 read_all_sheets &lt;- function(path) {
   sheet_names &lt;- excel_sheets(path)
@@ -4829,11 +4862,12 @@ gene_list_down &lt;- de_df %&gt;%
   pull(gene)
 
 run_enrichment_and_plotting(de_df, gene_list_down, &quot;Down&quot;, &quot;All_duraFibros&quot;, &quot;MS_vs_Ctrl&quot;)</code></pre>
-            </div>
-            <div id="volcano-plot-top-genes" class="section level3">
-              <h3>15.8.2 Volcano Plot (Top Genes)</h3>
-              <p>Visualize the overall fibroblast DE results using a volcano plot, labeling the top significant genes.</p>
-              <pre class="r"><code>de_file &lt;- &quot;15.8_DE_duraFibro_overall.xlsx&quot;
+</div>
+<div id="volcano-plot-top-genes" class="section level3">
+<h3>15.8.2 Volcano Plot (Top Genes)</h3>
+<p>Visualize the overall fibroblast DE results using a volcano plot,
+labeling the top significant genes.</p>
+<pre class="r"><code>de_file &lt;- &quot;15.8_DE_duraFibro_overall.xlsx&quot;
 
 all_clusters &lt;- getSheetNames(de_file)
 
@@ -4901,11 +4935,12 @@ for (cluster in all_clusters) {
 }
 
 rm(de_data, p, sig_genes, volcano_genes, all_clusters, cluster, de_file, n_down, n_up, out_file, sig, top_genes)</code></pre>
-            </div>
-            <div id="volcano-plot-genes-of-interest" class="section level3">
-              <h3>15.8.3 Volcano Plot (Genes of Interest)</h3>
-              <p>Visualize the overall fibroblast DE results, highlighting specific genes of interest (ECM and proliferation markers).</p>
-              <pre class="r"><code>de_file &lt;- &quot;15.8_DE_duraFibro_overall.xlsx&quot;
+</div>
+<div id="volcano-plot-genes-of-interest" class="section level3">
+<h3>15.8.3 Volcano Plot (Genes of Interest)</h3>
+<p>Visualize the overall fibroblast DE results, highlighting specific
+genes of interest (ECM and proliferation markers).</p>
+<pre class="r"><code>de_file &lt;- &quot;15.8_DE_duraFibro_overall.xlsx&quot;
 
 all_clusters &lt;- getSheetNames(de_file)
 
@@ -4999,11 +5034,12 @@ for (cluster in all_clusters) {
 }
 
 rm(de_data, p, sig_genes, volcano_genes, all_clusters, cluster, de_file, n_down, n_up, out_file, sig, top_genes)</code></pre>
-            </div>
-            <div id="nichenet-analysis-ms-vs-ctrl" class="section level3">
-              <h3>15.9 NicheNet Analysis (MS vs Ctrl)</h3>
-              <p>Perform NicheNet analysis to infer ligand-receptor interactions driving the structural fibroblast response in MS.</p>
-              <pre class="r"><code>#convert Seurat to single cell experiment and define meta data
+</div>
+<div id="nichenet-analysis-ms-vs-ctrl" class="section level3">
+<h3>15.9 NicheNet Analysis (MS vs Ctrl)</h3>
+<p>Perform NicheNet analysis to infer ligand-receptor interactions
+driving the structural fibroblast response in MS.</p>
+<pre class="r"><code>#convert Seurat to single cell experiment and define meta data
 samples_seurat$Fibro &lt;- dplyr::case_when(
   samples_seurat$annotated_manuscript %in% c(&quot;duraFibro1&quot;, &quot;duraFibro2&quot;, &quot;duraFibro3&quot;, &quot;duraFibro4&quot;, &quot;duraFibro5&quot;, &quot;duraFibro6&quot;, &quot;duraFibro7&quot;, &quot;duraFibro8&quot;) ~ &quot;duraFibro&quot;,
   TRUE ~ as.character(samples_seurat$annotated)
@@ -5233,10 +5269,11 @@ multinichenet_output = list(
 multinichenet_output = make_lite_output(multinichenet_output)
 
 saveRDS(multinichenet_output, file = &quot;15.9_multinichenet_MS_duraFibro.rds&quot;)</code></pre>
-              <div id="circos-plot-visualization-1" class="section level4">
-                <h4>15.9.1 Circos Plot Visualization</h4>
-                <p>Visualize the prioritized ligand-receptor interactions using Circos plots.</p>
-                <pre class="r"><code>#top20
+<div id="circos-plot-visualization-1" class="section level4">
+<h4>15.9.1 Circos Plot Visualization</h4>
+<p>Visualize the prioritized ligand-receptor interactions using Circos
+plots.</p>
+<pre class="r"><code>#top20
 duraFibro_MS_top20 &lt;- duraFibro_MS_interactions %&gt;%
   arrange(desc(prioritization_score)) %&gt;%
   slice(1:20)
@@ -5305,79 +5342,90 @@ for(receiver in unique_receivers) {
 
 # Close PDF device
 # dev.off()</code></pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+</div>
+</div>
+</div>
 
-    <script>
-      // add bootstrap table styles to pandoc tables
-      function bootstrapStylePandocTables() {
-        $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-      }
-      $(document).ready(function () {
-        bootstrapStylePandocTables();
-      });
-    </script>
 
-    <!-- tabsets -->
 
-    <script>
-      $(document).ready(function () {
-        window.buildTabsets('TOC');
-      });
+</div>
+</div>
 
-      $(document).ready(function () {
-        $('.tabset-dropdown > .nav-tabs > li').click(function () {
-          $(this).parent().toggleClass('nav-tabs-open');
-        });
-      });
-    </script>
+</div>
 
-    <!-- code folding -->
-    <script>
-      $(document).ready(function () {
-        window.initializeCodeFolding('show' === 'show');
-      });
-    </script>
+<script>
 
-    <script>
-      $(document).ready(function () {
-        // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-        $('.unlisted.unnumbered').addClass('toc-ignore');
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
 
-        // move toc-ignore selectors from section div to header
-        $('div.section.toc-ignore').removeClass('toc-ignore').children('h1,h2,h3,h4,h5').addClass('toc-ignore');
 
-        // establish options
-        var options = {
-          selectors: 'h1,h2,h3',
-          theme: 'bootstrap3',
-          context: '.toc-content',
-          hashGenerator: function (text) {
-            return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-          },
-          ignoreSelector: '.toc-ignore',
-          scrollTo: 0,
-        };
-        options.showAndHide = true;
-        options.smoothScroll = true;
+</script>
 
-        // tocify
-        var toc = $('#TOC').tocify(options).data('toc-tocify');
-      });
-    </script>
+<!-- tabsets -->
 
-    <!-- dynamically load mathjax for compatibility with self-contained -->
-    <script>
-      (function () {
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-        document.getElementsByTagName('head')[0].appendChild(script);
-      })();
-    </script>
-  </body>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
 </html>
